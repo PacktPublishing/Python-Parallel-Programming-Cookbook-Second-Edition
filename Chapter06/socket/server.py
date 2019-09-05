@@ -12,7 +12,7 @@ serversocket.bind((host,port))
 # queue up to 5 requests
 serversocket.listen(5)
 # establish a connection
-while 1:
+while True:	
     clientsocket,addr=serversocket.accept()
     print ("Connected with[addr],[port]%s"%str(addr))
     currentTime=time.ctime(time.time())+"\r\n"

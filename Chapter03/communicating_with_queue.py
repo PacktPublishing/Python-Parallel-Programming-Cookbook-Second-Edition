@@ -30,7 +30,8 @@ class consumer(multiprocessing.Process):
             else :
                 time.sleep(2)
                 item = self.queue.get()
-                print ('Process Consumer : item %d popped from by %s \n'\
+                print ('Process Consumer : item %d popped \
+                        from by %s \n'\
                        % (item, self.name))
                 time.sleep(1)
 

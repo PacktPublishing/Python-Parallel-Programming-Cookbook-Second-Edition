@@ -11,7 +11,7 @@ if rank == 0:
           "...receiving data to other process")
    for i in range(1,size):
 
-      #value = data[i]
+      value = data[i]
       print(" process %s receiving %s from process %s"\
             %(rank , value , i))
 
