@@ -37,7 +37,7 @@ class Pdb_test(object):
 **Following is what you need for this book:**
 The Python Parallel Programming Cookbook is for software developers who are well-versed with Python and want to use parallel programming techniques to write powerful and efficient code. This book will help you master the basics and the advanced of parallel computing.	
 
-With the following software and hardware list you can run all code files present in the book (Chapter 1-).
+With the following software and hardware list you can run all code files present in the book (Chapter 01-09).
 ### Software and Hardware List
 | No | Software required | OS required |
 | -------- | ------------------------------------ | ----------------------------------- |
