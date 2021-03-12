@@ -1,7 +1,5 @@
 sudo: enabled
 language: python
-services:
-  - redis
 script:
   - pytest -v -s --cov=Chapter01 --cov-report term-missing
 before_script:
