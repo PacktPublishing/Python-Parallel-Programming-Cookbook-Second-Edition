@@ -1,5 +1,5 @@
 import time
-from do_something import *
+from Chapter01/do_something import *
 
 if __name__ == "__main__":
     start_time = time.time()
