@@ -3,7 +3,7 @@ language: python
 services:
   - redis
 script:
-  - pytest -v -s --cov=app
+  - pytest -v -s --cov=Chapter01
 before_script:
   - echo "Menjalankan Testing, pathnya : "
   - echo PATH
