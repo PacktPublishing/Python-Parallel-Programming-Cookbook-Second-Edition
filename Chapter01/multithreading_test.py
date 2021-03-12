@@ -1,4 +1,4 @@
-from Chapter01/do_something import *
+from Chapter01.do_something import *
 import time
 import threading
 
