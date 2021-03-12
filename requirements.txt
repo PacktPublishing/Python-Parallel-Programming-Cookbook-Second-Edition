@@ -1,8 +1,2 @@
-gspread
-numpy
-random2
-pandas
-clipboard
-reportlab
 redis
 pytest-cov
