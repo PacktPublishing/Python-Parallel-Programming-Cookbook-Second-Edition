@@ -2,7 +2,7 @@ from Chapter01.do_something import *
 import time
 import threading
 
-if __name__ == "__main__":
+def multithreading_test():
     start_time = time.time()
     size = 10000000
     threads = 10  

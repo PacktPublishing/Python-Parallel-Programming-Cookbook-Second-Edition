@@ -1,7 +1,9 @@
 import time
 from Chapter01.do_something import *
 
-if __name__ == "__main__":
+
+
+def serial_test():
     start_time = time.time()
     size = 10000000   
     n_exec = 10

@@ -3,7 +3,7 @@ import time
 import multiprocessing
 
 
-if __name__ == "__main__":
+def multiprocessing_test():
     start_time = time.time()
     size = 10000000   
     procs = 10   
