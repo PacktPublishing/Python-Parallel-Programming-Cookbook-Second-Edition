@@ -5,7 +5,8 @@ services:
 script:
   - pytest -v -s --cov=app
 before_script:
-  - echo "Menjalankan Testing"
+  - echo "Menjalankan Testing, pathnya : "
+  - echo PATH
 install:
   - pip install -r requirements.txt
 before_install:
