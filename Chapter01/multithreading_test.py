@@ -21,4 +21,5 @@ def multithreading_test():
     print ("List processing complete.")
     end_time = time.time()
     print("multithreading time=", end_time - start_time)
+	return True 
 	

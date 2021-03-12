@@ -23,3 +23,4 @@ def multiprocessing_test():
     print ("List processing complete.")
     end_time = time.time()
     print("multiprocesses time=", end_time - start_time)
+	return True
