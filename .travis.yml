@@ -4,7 +4,6 @@ services:
   - redis
 script:
   - pytest -v -s --cov=Chapter01 --cov-report term-missing
-  - python app.py
 before_script:
   - echo "Menjalankan Testing"
 install:
