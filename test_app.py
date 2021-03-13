@@ -25,3 +25,9 @@ class TestApp(unittest.TestCase):
     def test_02_login_multiprocessing(self):
         response = multiprocessing_test.multiprocessing_test()
         self.assertEqual(response, True)
+		
+	def test_03_rolly113040087(self):
+        from Chapter02.MyThreadClass import main	
+        response = 	main()
+		self.assertEqual(response, True)
+		
