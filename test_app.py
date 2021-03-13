@@ -1,6 +1,5 @@
 import unittest
-import json
-import os
+
 
 
 from Chapter01 import serial_test,multiprocessing_test,multithreading_test
@@ -26,8 +25,8 @@ class TestApp(unittest.TestCase):
         response = multiprocessing_test.multiprocessing_test()
         self.assertEqual(response, True)
 		
-	def test_03_rolly113040087(self):
+    def test_03_rolly113040087(self):
         from Chapter02.MyThreadClass import main	
         response = 	main()
-		self.assertEqual(response, True)
+        self.assertEqual(response, True)
 		
