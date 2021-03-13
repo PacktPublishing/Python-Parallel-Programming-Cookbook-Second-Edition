@@ -57,7 +57,7 @@ def main():
 
     #Execution Time
     print("--- %s seconds ---" % (time.time() - start_time))
-	return True
+    return True
 
 
 if __name__ == "__main__":
