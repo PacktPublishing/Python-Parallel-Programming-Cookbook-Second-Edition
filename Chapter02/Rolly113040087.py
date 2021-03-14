@@ -11,10 +11,10 @@ class Rolly113040087 (Thread):
       self.duration = duration
       self.thread_number = thread_number
    def run(self):
-      print (str(self.thread_number)+". ---> " + self.name + " running, belonging to process ID "+ str(os.getpid()) + "\n")
+      print ("\n"+str(self.thread_number)+". ---> " + self.name + " running, belonging to process ID "+ str(os.getpid()) + "\n")
       time.sleep(self.duration)
-      print ("---> " + self.name + " over, sleep duration : " +str(self.duration) +" second \n")
-      print ("Realname of Thread : " + currentThread().getName())
+      print (str(self.thread_number)+". ---> " + self.name + " over, sleep duration : " +str(self.duration) +" second \n")
+      print ("\n"+"Realname of Thread : " + currentThread().getName())
 
 
 def main():
