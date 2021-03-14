@@ -13,8 +13,8 @@ class Rolly113040087 (Thread):
    def run(self):
       print ("\n"+str(self.thread_number)+". ---> " + self.name + " running, belonging to process ID "+ str(os.getpid()) + "\n")
       time.sleep(self.duration)
-      print (str(self.thread_number)+". ---> " + self.name + " over, sleep duration : " +str(self.duration) +" second \n")
-      print ("\n"+"Realname of Thread : " + currentThread().getName())
+      print (str(self.thread_number)+". ---> " + self.name + " over, sleep duration : " +str(self.duration) +" second")
+      print (", Realname of Thread : " + currentThread().getName())
 
 
 def main():

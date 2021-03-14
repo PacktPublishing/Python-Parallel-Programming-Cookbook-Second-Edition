@@ -21,7 +21,7 @@ class TestApp(unittest.TestCase):
         response = multithreading_test.multithreading_test()
         self.assertEqual(response, True)
 
-    def test_02_login_multiprocessing(self):
+    def test_02_multiprocessing(self):
         response = multiprocessing_test.multiprocessing_test()
         self.assertEqual(response, True)
 		
