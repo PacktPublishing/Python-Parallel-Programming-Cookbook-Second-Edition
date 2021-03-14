@@ -18,7 +18,7 @@ class Rolly113040087 (Thread):
       print (str(self.thread_number)+". ---> " + self.name + " over, sleep duration : " +str(self.duration) +" second")
       print (", Realname of Thread : " + currentThread().getName())
 
-   def do_something(count,out_list):
+   def do_something(self,count,out_list):
       for i in range(count):
          out_list.append(randint)
 
