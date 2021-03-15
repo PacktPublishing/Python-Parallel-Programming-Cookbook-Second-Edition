@@ -25,8 +25,8 @@ class TestApp(unittest.TestCase):
 #        response = multiprocessing_test.multiprocessing_test()
 #        self.assertEqual(response, True)
 		
-    def test_02_rolly_113040087(self):
-        from Chapter02.Rolly113040087 import main	
+    def test_02_kaisar_1184093(self):
+        from Chapter02.Kaisar1184093 import main	
         response = 	main()
         self.assertEqual(response, True)
 		
