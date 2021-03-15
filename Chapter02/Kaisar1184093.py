@@ -14,7 +14,7 @@ class Kaisar1184093 (Thread):
       print ("\n"+str(self.thread_number)+". ---> " + self.name + " running, belonging to process ID "+ str(os.getpid()) + "\n")
       x=randint(1,9)
       y=randint(1,9)
-      self.pangkat(x, y, 1500000)
+      self.pangkat(x, y, 5000000)
       print (str(self.thread_number)+". ---> " + self.name + " over, sleep duration : " +str(self.duration) +" second")
       print (", Realname of Thread : " + currentThread().getName())
 
