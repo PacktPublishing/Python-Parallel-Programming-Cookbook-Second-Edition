@@ -21,13 +21,13 @@ class josua_1184091 (Thread):
       print ("\n"+str(self.thread_number)+". ---> " + self.name + " running, belonging to process ID "+ str(os.getpid()) + "\n")
       d=randint(1,20)
       e=randint(1,20)
-      self.josh(d, e, 1500000)
+      self.josh(d, e, 3000000)
       print (str(self.thread_number)+". ---> " + self.name + " over, sleep duration : " +str(self.duration) +" second")
       print (", Realname of Thread : " + currentThread().getName())
 
    def josh(self, d, e, f):
        while f>0:
-        d=d*e/400
+        d=d*e/40
         f=f-2
 
 
@@ -105,10 +105,7 @@ def main():
 
     #Execution Time
     print("--- %s seconds ---" % (time.time() - start_time))
-    
-
-if __name__ == "__main__":
-    main()
+    return True
 
     
 
