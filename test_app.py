@@ -30,14 +30,19 @@ class TestApp(unittest.TestCase):
     #     response = 	main()
     #     self.assertEqual(response, True)
     
-    def test_02_rizaluardi_1184102(self):
-        from Chapter02.Rizaluardi1184102 import main
-        response =  main()
-        self.assertEqual(response, True)
+    #def test_02_rizaluardi_1184102(self):
+    #    from Chapter02.Rizaluardi1184102 import main
+    #    response =  main()
+    #    self.assertEqual(response, True)
         
-    def test_02_zanwar_1184050(self):
-        from Chapter02.Zanwar1184050 import main
-        response =  main()
+    #def test_02_zanwar_1184050(self):
+    #   from Chapter02.Zanwar1184050 import main
+    #   response =  main()
+    #   self.assertEqual(response, True)
+    
+    def test_02_hernandez_1184014(self):
+        from Chapter02.IrfanHernandez1184014 import main
+        response = main()
         self.assertEqual(response, True)
         
 
