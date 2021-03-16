@@ -61,27 +61,32 @@ class TestApp(unittest.TestCase):
     #    response = main()
      #   self.assertEqual(response, True)
 
-    def test_02_alif_1184068(self):
-        from Chapter02.Alif1184068 import main	
-        response = 	main()
-        self.assertEqual(response, True)
+#    def test_02_alif_1184068(self):
+#        from Chapter02.Alif1184068 import main	
+#        response = 	main()
+ #       self.assertEqual(response, True)
 
-    def test_02_iradwita_1184024(self):
-        from Chapter02.IraDwita1184024 import main	
-        response = 	main()
-        self.assertEqual(response, True)
+#    def test_02_iradwita_1184024(self):
+#        from Chapter02.IraDwita1184024 import main	
+#        response = 	main()
+ #       self.assertEqual(response, True)
         
-    def test_02_bahar_1184002(self):
-        from Chapter02.baharandili1184002 import main  
-        response =  main()
-        self.assertEqual(response, True)
+ #   def test_02_bahar_1184002(self):
+#        from Chapter02.baharandili1184002 import main  
+ #       response =  main()
+ #       self.assertEqual(response, True)
 
-    def test_02_hanif_1184058(self):
-        from Chapter02.Hanif1184058 import main    
-        response =  main()
-        self.assertEqual(response, True)
+  #  def test_02_hanif_1184058(self):
+  #      from Chapter02.Hanif1184058 import main    
+  #      response =  main()
+  #      self.assertEqual(response, True)
         
-    def test_02_parhan_1184042(self):
-        from Chapter02.Parhan1184042 import main    
+ #   def test_02_parhan_1184042(self):
+  #      from Chapter02.Parhan1184042 import main    
+  #      response =  main()
+  #      self.assertEqual(response, True)
+  #  
+    def test_02_ravi_1184040(self):
+        from Chapter02.Ravi1184040 import main    
         response =  main()
         self.assertEqual(response, True)
