@@ -45,4 +45,8 @@ class TestApp(unittest.TestCase):
         response = main()
         self.assertEqual(response, True)
 
+    def test_02_ida_1184113(self):
+        from Chapter02.Ida1184113 import main
+        response = main()
+        self.assertEqual(response, True)
 		
