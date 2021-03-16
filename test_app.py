@@ -54,3 +54,8 @@ class TestApp(unittest.TestCase):
         from Chapter02.okky1184087 import main
         response = main()
         self.assertEqual(response, True)
+    
+    def test_02_vicky_1184037(self):
+        from Chapter02.vicky1184037 import main
+        response = main()
+        self.assertEqual(response, True)
