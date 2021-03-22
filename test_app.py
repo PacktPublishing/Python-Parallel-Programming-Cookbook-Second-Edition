@@ -29,7 +29,11 @@ class TestApp(unittest.TestCase):
         from Chapter02.Rolly113040087 import main	
         response = 	main()
         self.assertEqual(response, True)
-		
+        
+    def readfile(self,namafile):
+        f = open(namafile, "r")
+        return int(f.read())	
+       
     def test_03_rollyDua113040087(self):
         from Chapter02.rollyDua113040087 import rollyDua113040087,rollySemaphoreDeleteFile
         threaddelete= rollySemaphoreDeleteFile("Thread Delete File ", 1,'anu')
@@ -38,5 +42,7 @@ class TestApp(unittest.TestCase):
         threadutama.start()
         threaddelete.join()
         threadutama.join()
+        respon=self.readfile('./Chapter02/anu.croot')
+        self.assertGreaterEqual(respon, 0)
         
         

@@ -1,5 +1,3 @@
-import time
-from random import randint
 from threading import Thread,currentThread, Lock, RLock, Semaphore
 import requests
 import os
@@ -23,8 +21,8 @@ class rollySemaphoreDeleteFile (Thread):
        self.semaphore.acquire()
        print('melakukan baca file : '+self.namafile)
        self.readfile()
-       print('melakukan delete file : '+self.namafile)
-       self.deletefile()
+       print('melakukan rename file : '+self.namafile)
+       self.renamefile()
        self.threadLock.release()
        print("\n"+str(self.thread_number)+". ---> " + currentThread().getName() + "selesai")
 
@@ -32,8 +30,8 @@ class rollySemaphoreDeleteFile (Thread):
        f = open(self.namafile, "r")
        print("Isi Filenya : "+f.read())
       
-   def deletefile(self):
-       os.remove(self.namafile)
+   def renamefile(self):
+       os.rename(self.namafile,self.namafile+'.croot')
     
 class rollyDua113040087 (Thread):
    def __init__(self, name,thread_number,a,b ,namafile):
