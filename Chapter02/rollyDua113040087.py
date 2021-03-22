@@ -11,16 +11,16 @@ class rollySemaphoreDeleteFile (Thread):
        Thread.__init__(self)    
        self.name = name
        self.thread_number = thread_number
-       self.namafile=namafile
+       self.namafile=os.path.join(os.path.dirname(__file__), namafile)
        self.semaphore = semaphore
 
    def run(self):
        print("\n"+str(self.thread_number)+". ---> " + self.name + "jalan")
        print('mau menjalankan semaphore acquire untuk baca dan delete file')
        self.semaphore.acquire()
-       print('melakukan baca file')
+       print('melakukan baca file : '+self.namafile)
        self.readfile()
-       print('melakukan delete file')
+       print('melakukan delete file : '+self.namafile)
        self.deletefile()
        print("\n"+str(self.thread_number)+". ---> " + currentThread().getName() + "selesai")
 
@@ -38,7 +38,7 @@ class rollyDua113040087 (Thread):
        self.semaphore = semaphore
        self.rlock = RLock()
        self.name = name
-       self.namafile = namafile
+       self.namafile=os.path.join(os.path.dirname(__file__), namafile)
        self.thread_number = thread_number
        self.a=a
        self.b=b
@@ -69,7 +69,7 @@ class rollyDua113040087 (Thread):
     
    def createfile(self,isi):
        self.semaphore.release()
-       print('di dalam Semaphore release, membuat file baru')
+       print('di dalam Semaphore release, membuat file baru : '+ self.namafile)
        f = open(self.namafile, "x")
        f.write(str(isi))
        f.close()
