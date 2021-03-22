@@ -61,18 +61,25 @@ class rollyDua113040087 (Thread):
            hasil = int(html)
            print("hasil : "+str(hasil))
            self.createfile(hasil)
+           self.readfile()
+           
 
    def hitung(self):
        with self.rlock:
             print('rlock hitung')
             self.apipangkat()
-    
+
+   def readfile(self):
+       f = open(self.namafile, "r")
+       print("Isi Filenya : "+f.read())
+       
    def createfile(self,isi):
        self.semaphore.release()
        print('di dalam Semaphore release, membuat file baru : '+ self.namafile)
        f = open(self.namafile, "x")
        f.write(str(isi))
        f.close()
+       print('sudah membuat file baru')
 
 
 
