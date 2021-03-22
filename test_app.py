@@ -38,10 +38,5 @@ class TestApp(unittest.TestCase):
         threadutama.start()
         threaddelete.join()
         threadutama.join()
-        f = open('anu', "r")
-        isifile=int(f.read())
-        respon = type(isifile)
-        print(respon)
-        self.assertEqual(respon, int)
         
         
