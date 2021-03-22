@@ -5,6 +5,7 @@ import requests
 import os
 
 semaphore = Semaphore(0)
+hasilperhitungan=0
 
 class rollySemaphoreDeleteFile (Thread):
    def __init__(self,name,thread_number,namafile):
