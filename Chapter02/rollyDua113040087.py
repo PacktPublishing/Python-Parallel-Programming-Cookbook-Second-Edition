@@ -71,16 +71,18 @@ class rollyDua113040087 (Thread):
             self.apipangkat()
 
    def readfile(self):
+       self.semaphore.release()
+       print('di dalam Semaphore release, membaca file yang sudah dibuat')
        f = open(self.namafile, "r")
        print("Isi Filenya : "+f.read())
        
    def createfile(self,isi):
-       self.semaphore.release()
-       print('di dalam Semaphore release, membuat file baru : '+ self.namafile)
+       print('membuat file baru : '+ self.namafile)
        f = open(self.namafile, "x")
        f.write(str(isi))
        f.close()
        print('sudah membuat file baru')
+       
 
 
 
