@@ -66,12 +66,6 @@ class rollyDua113040087 (Thread):
        with self.rlock:
             print('rlock hitung')
             self.apipangkat()
-
-   def deletefile(self):
-       print('mau menjalankan semaphore acquire')
-       self.semaphore.acquire()
-       print('semaphore acquire')
-       os.remove(self.namafile)
     
    def createfile(self,isi):
        self.semaphore.release()
