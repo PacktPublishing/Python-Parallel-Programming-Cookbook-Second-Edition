@@ -10,6 +10,7 @@ hasilperhitungan=0
 class rollySemaphoreDeleteFile (Thread):
    def __init__(self,name,thread_number,namafile):
        Thread.__init__(self)    
+       self.threadLock = Lock()
        self.name = name
        self.thread_number = thread_number
        self.namafile=os.path.join(os.path.dirname(__file__), namafile)
