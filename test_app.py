@@ -30,3 +30,18 @@ class TestApp(unittest.TestCase):
         response = 	main()
         self.assertEqual(response, True)
 		
+    def test_03_rollyDua113040087(self):
+        from Chapter02.rollyDua113040087 import rollyDua113040087,rollySemaphoreDeleteFile
+        threaddelete= rollySemaphoreDeleteFile("Thread Delete File ", 1,'anu')
+        threadutama = rollyDua113040087("Thread Utama ", 2,5,5,'anu')
+        threaddelete.start()
+        threadutama.start()
+        threaddelete.join()
+        threadutama.join()
+        f = open('anu', "r")
+        isifile=int(f.read())
+        respon = type(isifile)
+        print(respon)
+        self.assertEqual(respon, int)
+        
+        
