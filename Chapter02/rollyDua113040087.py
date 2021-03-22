@@ -18,11 +18,13 @@ class rollySemaphoreDeleteFile (Thread):
    def run(self):
        print("\n"+str(self.thread_number)+". ---> " + self.name + "jalan")
        print('mau menjalankan semaphore acquire untuk baca dan delete file')
+       self.threadLock.acquire()
        self.semaphore.acquire()
        print('melakukan baca file : '+self.namafile)
        self.readfile()
        print('melakukan delete file : '+self.namafile)
        self.deletefile()
+       self.threadLock.release()
        print("\n"+str(self.thread_number)+". ---> " + currentThread().getName() + "selesai")
 
    def readfile(self):
@@ -61,27 +63,21 @@ class rollyDua113040087 (Thread):
            html=response.content.decode(response.encoding)
            hasil = int(html)
            print("hasil : "+str(hasil))
-           self.createfile(hasil)
-           self.readfile()
-           
+           self.createfile(hasil)       
 
    def hitung(self):
        with self.rlock:
             print('rlock hitung')
             self.apipangkat()
-
-   def readfile(self):
-       self.semaphore.release()
-       print('di dalam Semaphore release, membaca file yang sudah dibuat')
-       f = open(self.namafile, "r")
-       print("Isi Filenya : "+f.read())
        
    def createfile(self,isi):
        print('membuat file baru : '+ self.namafile)
        f = open(self.namafile, "x")
        f.write(str(isi))
        f.close()
-       print('sudah membuat file baru')
+       print('sudah membuat file baru, mau relese semaphore')
+       self.semaphore.release()
+       print('di dalam Semaphore release, semaphore sudah di release')
        
 
 
