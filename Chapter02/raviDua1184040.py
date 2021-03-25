@@ -27,7 +27,7 @@ class raviSemaphoreDeleteFile (Thread):
        print("\n"+str(self.thread_number)+". ---> " + currentThread().getName() + "selesai") #threaddelete= raviSemaphoreDeleteFile  Selesai (14)
  
    def readfile(self):
-       f = open(self.namafile, "r") #r = membuka file untuk dibaca (default).
+       f = open(self.namafile, "r") #r / read = membuka file untuk dibaca (default)
        f.read(2) #Metode read(n) berfungsi untuk membaca sebanyak n karakter
        print("menampilkan dua angka terakhir 3125: "+f.read()) # (12)
     
