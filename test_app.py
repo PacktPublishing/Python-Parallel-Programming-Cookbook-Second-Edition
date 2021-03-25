@@ -65,6 +65,7 @@ class TestApp(unittest.TestCase):
         from Chapter02.Alif1184068 import main	
         response = 	main()
         self.assertEqual(response, True)
+<<<<<<< HEAD
 
     def test_02_iradwita_1184024(self):
         from Chapter02.IraDwita1184024 import main	
@@ -85,3 +86,22 @@ class TestApp(unittest.TestCase):
         from Chapter02.Parhan1184042 import main    
         response =  main()
         self.assertEqual(response, True)
+=======
+        
+    def readfile(self,namafile):
+        f = open(namafile, "r")
+        return int(f.read())	
+       
+    def test_03_rollyDua113040087(self):
+        from Chapter02.rollyDua113040087 import rollyDua113040087,rollySemaphoreDeleteFile
+        threaddelete= rollySemaphoreDeleteFile("Thread Delete File ", 1,'anu')
+        threadutama = rollyDua113040087("Thread Utama ", 2,5,5,'anu')
+        threaddelete.start()
+        threadutama.start()
+        threaddelete.join()
+        threadutama.join()
+        respon=self.readfile('./Chapter02/anu.croot')
+        self.assertGreaterEqual(respon, 0)
+        
+        
+>>>>>>> a6ae71262e263e401dde92eb13edffb6399aaf2c
