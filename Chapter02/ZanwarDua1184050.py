@@ -39,7 +39,7 @@ class zanwarSemaphoreRewriteFile (Thread):
        print(fr.read())
 
        
-class ZanwarDua1184050 (Thread):
+class zanwarDua1184050 (Thread):
    def __init__(self, name,thread_number,a,b ,filename):
        Thread.__init__(self)
        self.threadLock = Lock()

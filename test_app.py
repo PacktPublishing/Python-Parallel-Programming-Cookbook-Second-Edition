@@ -91,9 +91,9 @@ class TestApp(unittest.TestCase):
         return str(f.read())	
        
     def test_03_zanwarDua1184050(self):
-        from Chapter02.ZanwarDua1184050 import ZanwarDua1184050,zanwarSemaphoreRewriteFile
+        from Chapter02.ZanwarDua1184050 import zanwarDua1184050,zanwarSemaphoreRewriteFile
         threadrewrite= zanwarSemaphoreRewriteFile("Thread Rewrite File ", 1,'nilai')
-        threadutama = ZanwarDua1184050("Thread Utama ", 2,2,5,'nilai')
+        threadutama = zanwarDua1184050("Thread Utama ", 2,2,5,'nilai')
         threadrewrite.start()
         threadutama.start()
         threadrewrite.join()
