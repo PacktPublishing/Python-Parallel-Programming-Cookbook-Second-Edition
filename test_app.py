@@ -79,7 +79,7 @@ class TestApp(unittest.TestCase):
   #  def test_02_hanif_1184058(self):
   #      from Chapter02.Hanif1184058 import main    
   #      response =  main()
-  #      self.assertEqual(response, True) #
+  #      self.assertEqual(response, True) 
         
  #   def test_02_parhan_1184042(self):
   #      from Chapter02.Parhan1184042 import main    

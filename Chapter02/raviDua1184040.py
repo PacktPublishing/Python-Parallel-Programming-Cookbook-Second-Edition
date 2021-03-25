@@ -72,7 +72,7 @@ class raviDua1184040 (Thread):
        
    def createfile(self,isi):
        print('membuat file baru : '+ self.namafile) #Selanjutnya yang ini (8)
-       f = open(self.namafile, "w") #Membuka file untuk ditulis., Membuat file baru jika file belum tersedia atau menimpa isi file jika file sudah ada
+       f = open(self.namafile, "w") #Membuka file untuk ditulis. Membuat file baru jika file belum tersedia atau menimpa isi file jika file sudah ada
        f.write(str(isi)) 
        f.close()
        print('sudah membuat file baru, mau relese semaphore') #Lanjut (9)
