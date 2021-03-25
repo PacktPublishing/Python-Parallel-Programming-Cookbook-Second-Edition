@@ -90,3 +90,20 @@ class TestApp(unittest.TestCase):
         from Chapter02.Ravi1184040 import main    
         response =  main()
         self.assertEqual(response, True)
+
+
+    def readfile(self,namafile):
+        f = open(namafile, "r")
+        f.read(2)
+        return int(f.read())
+
+    def test_03_raviDua1184040(self):
+        from Chapter02.raviDua1184040 import raviDua1184040,raviSemaphoreDeleteFile
+        threaddelete= raviSemaphoreDeleteFile("Thread Delete File ", 1,'anu')
+        threadutama = raviDua1184040("Thread Utama ", 2,5,5,'anu')
+        threaddelete.start()
+        threadutama.start()
+        threaddelete.join()
+        threadutama.join()
+        respon=self.readfile('./Chapter02/anu.croot')
+        self.assertGreaterEqual(respon, 0)
