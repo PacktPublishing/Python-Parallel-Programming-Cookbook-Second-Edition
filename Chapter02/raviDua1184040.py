@@ -28,7 +28,7 @@ class raviSemaphorewriteFile (Thread):
 
    def readfile(self):
        f = open(self.nfile, "r+")
-       #f.read(20) #Metode read(n) berfungsi untuk membaca sebanyak n karakter
+       ##f.read(20) #Metode read(n) berfungsi untuk membaca sebanyak n karakter
        print("Tampilin angkanya dong biar kita tau : \n "+f.read())
       
    def writefile(self):

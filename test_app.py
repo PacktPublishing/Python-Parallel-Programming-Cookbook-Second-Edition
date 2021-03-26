@@ -108,7 +108,7 @@ class TestApp(unittest.TestCase):
     
 #    def readfile(self,filename):
 #        f = open(filename, "r")
-#        return int(f.read())	
+#        return int(f.read())	 #
        
 #    def test_03_zanwarDua1184050(self):
 #        from Chapter02.ZanwarDua1184050 import zanwarDua1184050,zanwarRewrite
