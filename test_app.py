@@ -133,7 +133,7 @@ class TestApp(unittest.TestCase):
 #        main =  WahyuKurniaSariDua1184001("Thread utama", 2,"pikachu", "pikachu") 
 #        delete.start()
 #        main.start()
-#        delete.join()
+#        delete.join() #
 #        main.join()
 #        self.assertGreaterEqual(main.getFileContent(),0 )
 
