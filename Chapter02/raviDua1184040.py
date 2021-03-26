@@ -5,80 +5,87 @@ import os
 semaphore = Semaphore(0)
 hasilperhitungan=0
 
-class raviSemaphoreDeleteFile (Thread):
-   def __init__(self,name,thread_number,namafile):
+class raviSemaphorewriteFile (Thread):
+   def __init__(self,name,threadId,nfile):
        Thread.__init__(self)    
        self.threadLock = Lock()
        self.name = name
-       self.thread_number = thread_number
-       self.namafile=os.path.join(os.path.dirname(__file__), namafile)
+       self.threadId = threadId
+       self.nfile=os.path.join(os.path.dirname(__file__), nfile)
        self.semaphore = semaphore
 
    def run(self):
-       print("\n"+str(self.thread_number)+". ---> " + self.name + "jalan") #baris baru, yang pertama (1) jalan, method raviSemaphoreDeleteFile memanggil dari test_app.py  
-       print('mau menjalankan semaphore acquire untuk baca dan delete file') #selanjutnya (2) yang dijalankan
+       print("\n"+str(self.threadId)+". ---> " + self.name + "Mulai ya")
+       print('mau menjalankan semaphore acquire untuk baca dan tulis, buat ulang file')
        self.threadLock.acquire()
        self.semaphore.acquire()
-       print('melakukan baca file : '+self.namafile)  # (11)
+       print('baca file dong : '+self.nfile)
        self.readfile()
-       print('melakukan rename file : '+self.namafile) # (13.1) bersamaan dengan Thread utama selesai
-       self.renamefile()
+       print('Tulis dan buat ulang file dong : '+self.nfile)
+       self.writefile()
        self.threadLock.release()
-       print("\n"+str(self.thread_number)+". ---> " + currentThread().getName() + "selesai") #threaddelete= raviSemaphoreDeleteFile  Selesai (14)
- 
-   def readfile(self):
-       f = open(self.namafile, "r") #r / read = membuka file untuk dibaca (default).
-       f.read(2) #Metode read(n) berfungsi untuk membaca sebanyak n karakter
-       print("menampilkan dua angka terakhir 3125: "+f.read()) # (12)
-    
-   def renamefile(self):
-    os.rename(self.namafile,self.namafile+('.croot'))
+       print("\n"+str(self.threadId)+". ---> " + currentThread().getName() + "Finish")
 
-class raviDua1184040 (Thread):
-   def __init__(self, name,thread_number,a,b ,namafile):
+   def readfile(self):
+       f = open(self.nfile, "r+")
+       #f.read(20) #Metode read(n) berfungsi untuk membaca sebanyak n karakter
+       print("Tampilin angkanya dong biar kita tau : \n "+f.read())
+      
+   def writefile(self):
+       f = open(self.nfile, "r+")
+       fd = open(self.nfile+'.html', "w")
+       for line in f:
+           fd.write(line.replace('Angka', 'Nomor'))
+       fr = open(self.nfile+'.html', "r+")    
+       print(fr.read())
+
+       
+class raviDua1184040(Thread):
+   def __init__(self, name,threadId,ravi,rahmatul ,nfile):
        Thread.__init__(self)
        self.threadLock = Lock()
        self.semaphore = semaphore
        self.rlock = RLock()
        self.name = name
-       self.namafile=os.path.join(os.path.dirname(__file__), namafile)
-       self.thread_number = thread_number
-       self.a=a
-       self.b=b
+       self.nfile=os.path.join(os.path.dirname(__file__), nfile)
+       self.threadId = threadId
+       self.ravi=ravi
+       self.rahmatul=rahmatul
       
    def run(self):
-       print("\n"+str(self.thread_number)+". ---> " + self.name + "jalan") #Setelah itu (3) raviDua1184040 jalan
+       print("\n"+str(self.threadId)+". ---> " + self.name + "Mulai aja ya")
        self.threadLock.acquire()
-       print("threeadlock acquire utama") #terus (4)
-       self.hitung()
+       print("ini threeadlock acquire utama")
+       self.count()
        self.threadLock.release()
-       print("\n"+str(self.thread_number)+". ---> " + currentThread().getName() + "selesai") #Thread Utama Selesai (13.1) threadutama = raviDua1184040 
+       print("\n"+str(self.threadId)+". ---> " + currentThread().getName() + "Finish")
          
-   def apipangkat(self):
+   def apicount(self):
        with self.rlock:
-           print('didalam rlock apipangkat, akses web service...') #Lanjut (6) kesini
-           apiurl='https://api.mathjs.org/v4/?expr='
-           eq=str(self.a)+'^'+str(self.b)
+           print('Inside rlock apipangkat, akses web service...')
+           apiurl='	http://api.mathjs.org/v4/?expr=2%2B3*sqrt(4)'
+           eq=str(self.ravi)+'*'+str(self.rahmatul)
            response = requests.get(apiurl+eq)
            html=response.content.decode(response.encoding)
            hasil = int(html)
-           print("hasil : "+str(hasil)) #ini (7)
-           self.createfile(hasil)       
+           string = "Angka : "
+           i = 1
+           while i <= hasil:
+               string = string+str(i)
+               i = i +1
+           self.createfile(string)  
+           x = open(self.nfile, "r+")
+           print(x.read())
 
-   def hitung(self):
+   def count(self):
        with self.rlock:
-            print('rlock hitung') #Setelah itu (5)
-            self.apipangkat()
+            self.apicount()
        
    def createfile(self,isi):
-       print('membuat file baru : '+ self.namafile) #Selanjutnya yang ini (8)
-       f = open(self.namafile, "w") #Membuka file untuk ditulis,. Membuat file baru jika file belum tersedia atau menimpa isi file jika file sudah ada
-       f.write(str(isi)) 
+       print('Membuat file baru nih : '+ self.nfile)
+       f = open(self.nfile, "w")
+       f.write(str(isi))
        f.close()
-       print('sudah membuat file baru, mau relese semaphore') #Lanjut (9)
+       print('Sudah di buat file baru-nya nih, SIAP-Siap ya, selanjutnya mau relese semaphore')
        self.semaphore.release()
-       print('di dalam Semaphore release, semaphore sudah di release') #Setelah itu (10)
-       
-
-
-
+       print('di dalam Semaphore release tadi, semaphore sudah di release')
