@@ -2,12 +2,12 @@ from threading import Thread, currentThread, Lock, RLock, Semaphore
 import requests
 import os
 
-class josua1184091Arrangement (Thread):
-    
+
 semaphore = Semaphore(0)
 hasilperhitungan=0
 
-   def __init__(self, nama, thread_number, filenya):
+class josua1184091Arrangement (Thread):
+    def __init__(self, nama, thread_number, filenya):
        Thread.__init__(self)
        self.threadLock = Lock()
        self.nama = nama
