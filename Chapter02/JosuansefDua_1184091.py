@@ -2,43 +2,39 @@ from threading import Thread, currentThread, Lock, RLock, Semaphore
 import requests
 
 import os
-import glob
 import json
 
 class josua1184091Arrangement (Thread):
- files_list = glob.glob("*")
-#Membuat satu set tipe ekstensi didalam folder untuk menghindari duplikasi file yang masuk
-#menambahkan setiap tipe ekstensi ke satu set
-for file in files_list:
-    extension = file.split(sep=".")
-    try:
-        extension_set.add(extension[1])
-    except IndexError:
-        continue
 
-#print(extension_set)
+   def __init__(self, nama, thread_number, filenya):
+       Thread.__init__(self)
+       self.threadLock = Lock()
+       self.nama = nama
+       self.thread_number = thread_number
+       self.filenya=os.path.join(os.path.dirname(__file__), filenya)
+       self.semaphore = semaphore
 
-#Fungsi untuk membuat direktori untuk setiap ekstensi yang berbeda
-def createDirs():
-    for dir in extension_set:
-        try:
-            os.makedirs(dir+"_files")
-        except FileExistsError:
-            continue
+   def jalankan(self):
+       print("\n"+str(self.thread_number)+". ---> " + self.nama + "run")
+       print('run semaphore yaitu untuk membuat dan menghapus file')
+       self.threadLock.acquire()
+       self.semaphore.acquire()
+       
+       print('buat file : '+self.filenya)
+       self.createfile()
+       
+       print('hapus file : '+self.filenya)
+       self.deletefile()
+       self.threadLock.release()
+       #print("\n"+str(self.thread_number)+". ---> " + currentThread().getName() + "selesai")
 
-#Fungsi untuk memindahkan file file ke folder masing-masing berdasarkan ekstensinya
-def arrange():
-    for file in files_list:
-        fextension = file.split(sep=".")
-        try:
-            os.rename(file, fextension[1]+"_files/"+file)
-        except (OSError, IndexError):
-            continue
-
-#memanggil fungsinya
-createDirs()
-arrange()
-                               
+    def bacafile(self):
+       f = open(self.filenya, "r")
+       print("Josua1184091 : "+f.read())
+      
+    def ubahnamafile(self):
+       os.rename(self.filenya,self.filenya+'.Josuainthehouse')
+       
   class josua1184091Api (Thread):
    def __init__(self, nama,thread_number,filenya, bravo, delta):
        Thread.__init__(self)
