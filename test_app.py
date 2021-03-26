@@ -25,6 +25,7 @@ class TestApp(unittest.TestCase):
 #        response = multiprocessing_test.multiprocessing_test()
 #        self.assertEqual(response, True)
 		
+<<<<<<< HEAD
     # def test_02_kaisar_1184093(self):
     #     from Chapter02.Kaisar1184093 import main	
     #     response = 	main()
@@ -65,3 +66,26 @@ class TestApp(unittest.TestCase):
         from Chapter02.josua_1184091 import main    
         response =  main()
         self.assertEqual(response, True)
+=======
+    def test_02_rolly_113040087(self):
+        from Chapter02.Rolly113040087 import main	
+        response = 	main()
+        self.assertEqual(response, True)
+        
+    def readfile(self,namafile):
+        f = open(namafile, "r")
+        return int(f.read())	
+       
+    def test_03_rollyDua113040087(self):
+        from Chapter02.rollyDua113040087 import rollyDua113040087,rollySemaphoreDeleteFile
+        threaddelete= rollySemaphoreDeleteFile("Thread Delete File ", 1,'anu')
+        threadutama = rollyDua113040087("Thread Utama ", 2,5,5,'anu')
+        threaddelete.start()
+        threadutama.start()
+        threaddelete.join()
+        threadutama.join()
+        respon=self.readfile('./Chapter02/anu.croot')
+        self.assertGreaterEqual(respon, 0)
+        
+        
+>>>>>>> a6ae71262e263e401dde92eb13edffb6399aaf2c
