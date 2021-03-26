@@ -101,9 +101,17 @@ class TestApp(unittest.TestCase):
         respon=self.readfile('./Chapter02/nilai.txt')
         self.assertGreaterEqual(respon, 0)
     
-    
-    
-    
-    
-    
-    
+    def test_03_WahyuKurniaSariDua1184001(self):
+        from Chapter02.WahyuKurniasariDua1184001 import WahyuKurniaSariSemaphoreDeleteFile,  WahyuKurniaSariDua1184001
+        delete = WahyuKurniaSariSemaphoreDeleteFile("Thread delete", 1,"pikachu")
+        main =  WahyuKurniaSariDua1184001("Thread utama", 2,"pikachu", "pikachu") 
+        delete.start()
+        main.start()
+        delete.join()
+        main.join()
+        self.assertGreaterEqual(main.getFileContent(),0 )
+
+
+
+
+  
