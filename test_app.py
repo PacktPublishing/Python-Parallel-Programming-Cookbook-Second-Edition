@@ -85,10 +85,10 @@ class TestApp(unittest.TestCase):
     #    from Chapter02.Parhan1184042 import main    
     #    response =  main()
     #    self.assertEqual(response, True)
-    def test_02_ravi_1184040(self):
-         from Chapter02.Ravi1184040 import main    
-         response =  main()
-         self.assertEqual(response, True)
+    #def test_02_ravi_1184040(self):
+     #    from Chapter02.Ravi1184040 import main    
+      #   response =  main()
+       #  self.assertEqual(response, True)
     
     def readfile(self,nfile):
         f = open(nfile, "r+")

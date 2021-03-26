@@ -33,11 +33,11 @@ class raviSemaphorewriteFile (Thread):
       
    def writefile(self):
        f = open(self.nfile, "r+")
-       fd = open(self.nfile+'.html', "w")
+       fc = open(self.nfile+'.html', "w")
        for line in f:
-           fd.write(line.replace('Angka', 'Nomor'))
-       fr = open(self.nfile+'.html', "r+")    
-       print(fr.read())
+           fc.write(line.replace('Angka', 'Nomor'))
+       ff = open(self.nfile+'.html', "r+")    
+       print(ff.read())
 
        
 class raviDua1184040(Thread):
@@ -70,7 +70,7 @@ class raviDua1184040(Thread):
            hasil = int(html)
            string = "Angka : "
            i = 1
-           while i <= hasil:
+           for i in range(1, 11):
                string = string+str(i)
                i = i +1
            self.createfile(string)  
