@@ -5,7 +5,7 @@ import os
 semaphore = Semaphore(0)
 hasilperhitungan=0
 
-class zanwarSemaphoreRewriteFile (Thread):
+class zanwarRewrite (Thread):
    def __init__(self,name,thread_number,filename):
        Thread.__init__(self)    
        self.threadLock = Lock()
@@ -19,11 +19,11 @@ class zanwarSemaphoreRewriteFile (Thread):
        print('semaphore acquire')
        self.threadLock.acquire()
        self.semaphore.acquire()
-       print('read file : '+self.filename)
-       self.readfile()
        print('rewrite : '+self.filename)
        self.rewritefile()
        self.threadLock.release()
+       print("Read setelah rewrite")
+       self.readfile()
        print("\n"+str(self.thread_number)+". ---> " + currentThread().getName() + "end")
 
    def readfile(self):
@@ -34,7 +34,7 @@ class zanwarSemaphoreRewriteFile (Thread):
        f = open(self.filename, "r")
        fd = open(self.filename+'.txt', "w")
        for line in f:
-           fd.write(line.replace('Angka', 'Nomor'))
+           fd.write(line.replace('Angka : ', ''))
        fr = open(self.filename+'.txt', "r")    
        print(fr.read())
 
@@ -59,12 +59,13 @@ class zanwarDua1184050 (Thread):
        self.threadLock.release()
        print("\n"+str(self.thread_number)+". ---> " + currentThread().getName() + "finish.")
          
-   def apicount(self):
+   def randomapi(self):
        with self.rlock:
            print('Inside rlock apipangkat, akses web service...')
-           apiurl='https://api.mathjs.org/v4/?expr='
-           eq=str(self.a)+'*'+str(self.b)
-           response = requests.get(apiurl+eq)
+           apiurl='https://www.random.org/integers/?num=1&'
+           eq='min='+str(self.a)+'&max='+str(self.b)
+           form = '&col=1&base=10&format=plain&rnd=new'
+           response = requests.get(apiurl+eq+form)
            html=response.content.decode(response.encoding)
            hasil = int(html)
            string = "Angka : "
@@ -78,14 +79,14 @@ class zanwarDua1184050 (Thread):
 
    def count(self):
        with self.rlock:
-            self.apicount()
+            self.randomapi()
        
    def createfile(self,isi):
        print('Create File : '+ self.filename)
        f = open(self.filename, "w")
        f.write(str(isi))
        f.close()
-       print('Create File > Semaphore release')
+       print('Create File')
        self.semaphore.release()
        print('Semaphore released.')
        

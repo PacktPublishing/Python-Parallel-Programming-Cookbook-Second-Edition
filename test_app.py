@@ -88,18 +88,18 @@ class TestApp(unittest.TestCase):
     
     def readfile(self,filename):
         f = open(filename, "r")
-        return str(f.read())	
+        return int(f.read())	
        
     def test_03_zanwarDua1184050(self):
-        from Chapter02.ZanwarDua1184050 import zanwarDua1184050,zanwarSemaphoreRewriteFile
-        threadrewrite= zanwarSemaphoreRewriteFile("Thread Rewrite File ", 1,'nilai')
+        from Chapter02.ZanwarDua1184050 import zanwarDua1184050,zanwarRewrite
+        threadrewrite= zanwarRewrite("Thread Rewrite File ", 1,'nilai')
         threadutama = zanwarDua1184050("Thread Utama ", 2,2,5,'nilai')
         threadrewrite.start()
         threadutama.start()
         threadrewrite.join()
         threadutama.join()
         respon=self.readfile('./Chapter02/nilai.txt')
-        self.assertRegex(respon, "Nomor : 12345678910")
+        self.assertGreaterEqual(respon, 0)
     
     
     
