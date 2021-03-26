@@ -61,31 +61,46 @@ class TestApp(unittest.TestCase):
     #    response = main()
      #   self.assertEqual(response, True)
 
-    def test_02_alif_1184068(self):
-        from Chapter02.Alif1184068 import main	
-        response = 	main()
-        self.assertEqual(response, True)
+    #def test_02_alif_1184068(self):
+    #    from Chapter02.Alif1184068 import main	
+    #    response = 	main()
+    #    self.assertEqual(response, True)
 
-    def test_02_iradwita_1184024(self):
-        from Chapter02.IraDwita1184024 import main	
-        response = 	main()
-        self.assertEqual(response, True)
+    #def test_02_iradwita_1184024(self):
+    #    from Chapter02.IraDwita1184024 import main	
+    #    response = 	main()
+    #    self.assertEqual(response, True)
         
-    def test_02_bahar_1184002(self):
-        from Chapter02.baharandili1184002 import main  
-        response =  main()
-        self.assertEqual(response, True)
+    #def test_02_bahar_1184002(self):
+    #    from Chapter02.baharandili1184002 import main  
+    #    response =  main()
+    #    self.assertEqual(response, True)
 
-    def test_02_hanif_1184058(self):
-        from Chapter02.Hanif1184058 import main    
-        response =  main()
-        self.assertEqual(response, True)
+    #def test_02_hanif_1184058(self):
+    #    from Chapter02.Hanif1184058 import main    
+    #    response =  main()
+    #    self.assertEqual(response, True)
         
-    def test_02_parhan_1184042(self):
-        from Chapter02.Parhan1184042 import main    
-        response =  main()
-        self.assertEqual(response, True)
-        
+    #def test_02_parhan_1184042(self):
+    #    from Chapter02.Parhan1184042 import main    
+    #    response =  main()
+    #    self.assertEqual(response, True)
+    
+    def readfile(self,filename):
+        f = open(filename, "r")
+        return int(f.read())	
+       
+    def test_03_zanwarDua1184050(self):
+        from Chapter02.ZanwarDua1184050 import zanwarDua1184050,zanwarRewrite
+        threadrewrite= zanwarRewrite("Thread Rewrite File ", 1,'nilai')
+        threadutama = zanwarDua1184050("Thread Utama ", 2,2,5,'nilai')
+        threadrewrite.start()
+        threadutama.start()
+        threadrewrite.join()
+        threadutama.join()
+        respon=self.readfile('./Chapter02/nilai.txt')
+        self.assertGreaterEqual(respon, 0)
+    
     def test_03_WahyuKurniaSariDua1184001(self):
         from Chapter02.WahyuKurniasariDua1184001 import WahyuKurniaSariSemaphoreDeleteFile,  WahyuKurniaSariDua1184001
         delete = WahyuKurniaSariSemaphoreDeleteFile("Thread delete", 1,"pikachu")
@@ -98,4 +113,5 @@ class TestApp(unittest.TestCase):
 
 
 
-        
+
+  
