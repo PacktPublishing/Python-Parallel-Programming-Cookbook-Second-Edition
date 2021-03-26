@@ -140,13 +140,13 @@ class TestApp(unittest.TestCase):
         
     def test_03_JosuaDua1184091(self):
         from Chapter02.JosuansefDua_1184091 import josua1184091Arrangement, josua1184091Api
-        threadarrangement= josua1184091Arrangement("Thread Utama arrangement file ", 1,'arrangement')
+        threadarrange= josua1184091Arrangement("Thread Utama arrangement file ", 1,'arrangement')
         threadutama =  josua1184091Api("Thread api file ", 2,2,5,'arrangement')
-        threadarrangement.start()
+        threadarrange.start()
         threadutama.start()
-        threadarrangement.join()
+        threadarrange.join()
         threadutama.join()
-        respon=self.readfile('./Chapter02/arrangement.txt')
+        respon=self.readfile('./Chapter02/hasil.txt')
         self.assertGreaterEqual(respon, 0)
 
 
