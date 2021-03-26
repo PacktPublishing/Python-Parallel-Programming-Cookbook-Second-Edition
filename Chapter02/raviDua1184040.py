@@ -15,7 +15,7 @@ class raviSemaphorewriteFile (Thread):
        self.semaphore = semaphore
 
    def run(self):
-       print("\n"+str(self.threadId)+". ---> " + self.name + "Mulai ya")
+       print("\n"+str(self.threadId)+". ---> " + self.name + "Mulai ya!")
        print('mau menjalankan semaphore acquire untuk baca dan tulis, buat ulang file')
        self.threadLock.acquire()
        self.semaphore.acquire()

@@ -137,12 +137,12 @@ class TestApp(unittest.TestCase):
 #        main.join()
 #        self.assertGreaterEqual(main.getFileContent(),0 )
 
-def readfile(self,nfile):
+    def readfile(self,nfile):
         f = open(nfile, "r+")
         #f.read(20)
         return str(f.read())	
        
-def test_03_raviDua1184050(self):
+    def test_03_raviDua1184040(self):
         from Chapter02.raviDua1184040 import raviDua1184040,raviSemaphorewriteFile
         threadwrite= raviSemaphorewriteFile("Thread write File ", 1,'nilai')
         threadutama = raviDua1184040("Thread Utama ", 2,2,5,'nilai')
