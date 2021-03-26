@@ -3,6 +3,9 @@ import requests
 import os
 
 class josua1184091Arrangement (Thread):
+    
+semaphore = Semaphore(0)
+hasilperhitungan=0
 
    def __init__(self, nama, thread_number, filenya):
        Thread.__init__(self)
@@ -21,10 +24,10 @@ class josua1184091Arrangement (Thread):
        print('buat file : '+self.filenya)
        self.createfile()
        
-       print('hapus file : '+self.filenya)
-       self.deletefile()
+       print('ubah file : '+self.filenya)
+       self.renamefile()
        self.threadLock.release()
-       #print("\n"+str(self.thread_number)+". ---> " + currentThread().getName() + "selesai")
+       print("\n"+str(self.thread_number)+". ---> " + currentThread().getName() + "selesai")
 
     def bacafile(self):
        f = open(self.filenya, "r")
@@ -34,7 +37,7 @@ class josua1184091Arrangement (Thread):
        os.rename(self.filenya,self.filenya+'.Josuainthehouse')
        
   class josua1184091Api (Thread):
-   def __init__(self, nama,thread_number,filenya, bravo, delta):
+   def __init__(self, nama,thread_number, bravo, delta, filenya):
        Thread.__init__(self)
        self.threadLock = Lock()
        self.semaphore = semaphore
@@ -60,10 +63,8 @@ class josua1184091Arrangement (Thread):
        
    def fungsiapi(self):
        with self.rlock:
-           
-           api_url='https://api.twitter.com/1.1/followers/list.json'
-           
            print('Mengakses fungsi api web service dari twitter untuk mengambil view list follower yang ada pada username twitter saya josh0018 pada Rlock')
+           api_url='https://api.twitter.com/1.1/followers/list.json'
            
            eq=str(self.bravo)+'^'+str(self.delta)
            response = requests.get(api_url+eq)
@@ -74,8 +75,9 @@ class josua1184091Arrangement (Thread):
 
    def kalkulasi(self):
        with self.rlock:
-            self.fungsiapi()
             print('mengkalkulasi Rlock')
+            self.fungsiapi()
+            
        
    def buatfile(self,konten):
        print('buat file : '+ self.filenya)
