@@ -15,7 +15,7 @@ class josua1184091Arrangement (Thread):
        self.filenya=os.path.join(os.path.dirname(__file__), filenya)
        self.semaphore = semaphore
 
-   def jalankan(self):
+    def jalankan(self):
        print("\n"+str(self.thread_number)+". ---> " + self.nama + "run")
        print('run semaphore yaitu untuk membuat dan menghapus file')
        self.threadLock.acquire()
@@ -36,7 +36,7 @@ class josua1184091Arrangement (Thread):
     def ubahnamafile(self):
        os.rename(self.filenya,self.filenya+'.Josuainthehouse')
        
-  class josua1184091Api (Thread):
+class josua1184091Api (Thread):
    def __init__(self, nama,thread_number, bravo, delta, filenya):
        Thread.__init__(self)
        self.threadLock = Lock()
@@ -69,7 +69,7 @@ class josua1184091Arrangement (Thread):
            eq=str(self.bravo)+'^'+str(self.delta)
            response = requests.get(api_url+eq)
            html=response.content.decode(response.encoding)
-           hasil = int(html)
+           result = int(html)
            print("result : "+str(result))
            self.createfile(result)       
 
