@@ -1,8 +1,6 @@
 from threading import Thread, currentThread, Lock, RLock, Semaphore
 import requests
-
 import os
-import json
 
 class josua1184091Arrangement (Thread):
 
@@ -84,9 +82,9 @@ class josua1184091Arrangement (Thread):
        f = open(self.filenya, "x")
        f.write(str(konten))
        f.close()
-       print('sudah membuat file baru, mau relese semaphore')
+       print('buat file baru')
        self.semaphore.release()
-       print('di dalam Semaphore release, semaphore sudah di release')
+       print('semaphore sudah di release')
        
 
 

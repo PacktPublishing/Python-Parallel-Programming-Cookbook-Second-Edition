@@ -139,8 +139,8 @@ class TestApp(unittest.TestCase):
        # self.assertGreaterEqual(main.getFileContent(),0 )
         
     def test_03_JosuaDua1184091(self):
-        from Chapter02.JosuansefDua_1184091 import josua1184091Arrangement,josua1184091Api
-        threadarrangement= josua1184091Arrangement("Thread api file ", 1,'nilai')
+        from Chapter02.JosuansefDua_1184091 import josua1184091Arrangement, josua1184091Api
+        threadarrangement= josua1184091Arrangement("Thread api file ", 1,'arrangement')
         threadutama =  josua1184091Api("Thread Utama arrangement file ", 2,2,5,'arrangement')
         threadarrangement.start()
         threadutama.start()
