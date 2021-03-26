@@ -1,0 +1,97 @@
+from threading import Thread, currentThread, Lock, RLock, Semaphore
+import requests
+
+import os
+import glob
+import json
+
+class josua1184091Arrangement (Thread):
+ files_list = glob.glob("*")
+#Membuat satu set tipe ekstensi didalam folder untuk menghindari duplikasi file yang masuk
+#menambahkan setiap tipe ekstensi ke satu set
+for file in files_list:
+    extension = file.split(sep=".")
+    try:
+        extension_set.add(extension[1])
+    except IndexError:
+        continue
+
+#print(extension_set)
+
+#Fungsi untuk membuat direktori untuk setiap ekstensi yang berbeda
+def createDirs():
+    for dir in extension_set:
+        try:
+            os.makedirs(dir+"_files")
+        except FileExistsError:
+            continue
+
+#Fungsi untuk memindahkan file file ke folder masing-masing berdasarkan ekstensinya
+def arrange():
+    for file in files_list:
+        fextension = file.split(sep=".")
+        try:
+            os.rename(file, fextension[1]+"_files/"+file)
+        except (OSError, IndexError):
+            continue
+
+#memanggil fungsinya
+createDirs()
+arrange()
+                               
+  class josua1184091Api (Thread):
+   def __init__(self, nama,thread_number,filenya, bravo, delta):
+       Thread.__init__(self)
+       self.threadLock = Lock()
+       self.semaphore = semaphore
+       self.rlock = RLock()
+       self.nama = nama
+       self.filenya=os.path.join(os.path.dirname(__file__), filenya)
+       self.thread_number = thread_number
+       self.bravo=bravo
+       self.delta=delta
+      
+   def jalankan(self):
+       print("\n"+str(self.thread_number)+". ---> " + self.nama + "run")
+       self.threadLock.acquire()
+       
+       print("ini adalah threadlock aqcuire")     
+       self.kalkulasi()
+       
+       self.threadLock.release()
+       
+       print("\n"+str(self.thread_number)+". ---> " + currentThread().getName() + "yoi beres")
+       
+       
+       
+   def fungsiapi(self):
+       with self.rlock:
+           
+           api_url='https://api.twitter.com/1.1/followers/list.json'
+           
+           print('Mengakses fungsi api web service dari twitter untuk mengambil view list follower yang ada pada username twitter saya josh0018 pada Rlock')
+           
+           eq=str(self.bravo)+'^'+str(self.delta)
+           response = requests.get(api_url+eq)
+           html=response.content.decode(response.encoding)
+           hasil = int(html)
+           print("result : "+str(result))
+           self.createfile(result)       
+
+   def kalkulasi(self):
+       with self.rlock:
+            self.fungsiapi()
+            print('mengkalkulasi Rlock')
+       
+   def buatfile(self,konten):
+       print('buat file : '+ self.filenya)
+       f = open(self.filenya, "x")
+       f.write(str(konten))
+       f.close()
+       print('sudah membuat file baru, mau relese semaphore')
+       self.semaphore.release()
+       print('di dalam Semaphore release, semaphore sudah di release')
+       
+
+
+
