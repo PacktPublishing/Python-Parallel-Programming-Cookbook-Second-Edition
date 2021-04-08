@@ -90,26 +90,26 @@ class TestApp(unittest.TestCase):
       #   response =  main()
        #  self.assertEqual(response, True)
     
-    def readfile(self,nfile):
-        f = open(nfile, "r+")
-        #f.read(20)
-        return str(f.read())	
+    # def readfile(self,nfile):
+    #     f = open(nfile, "r+")
+    #     #f.read(20)
+    #     return str(f.read())	
        
-    def test_03_raviDua1184050(self):
-        from Chapter02.raviDua1184040 import raviDua1184040,raviSemaphorewriteFile
-        threadwrite= raviSemaphorewriteFile("Thread write File ", 1,'nilai')
-        threadutama = raviDua1184040("Thread Utama ", 2,2,5,'nilai')
-        threadwrite.start()
-        threadutama.start()
-        threadwrite.join()
-        threadutama.join()
-        respon=self.readfile('./Chapter02/nilai.html')
-        self.assertRegex(respon, "Nomor : 12345678910")
+    # def test_03_raviDua1184050(self):
+    #     from Chapter02.raviDua1184040 import raviDua1184040,raviSemaphorewriteFile
+    #     threadwrite= raviSemaphorewriteFile("Thread write File ", 1,'nilai')
+    #     threadutama = raviDua1184040("Thread Utama ", 2,2,5,'nilai')
+    #     threadwrite.start()
+    #     threadutama.start()
+    #     threadwrite.join()
+    #     threadutama.join()
+    #     respon=self.readfile('./Chapter02/nilai.html')
+    #     self.assertRegex(respon, "Nomor : 12345678910")
     
 #    def readfile(self,filename):
 #        f = open(filename, "r")
 #        return int(f.read())	 #
-       
+
 #    def test_03_zanwarDua1184050(self):
 #        from Chapter02.ZanwarDua1184050 import zanwarDua1184050,zanwarRewrite
 #        threadrewrite= zanwarRewrite("Thread Rewrite File ", 1,'nilai')
@@ -140,18 +140,22 @@ class TestApp(unittest.TestCase):
     def readfile(self,nfile):
         f = open(nfile, "r+")
         #f.read(20)
-        return str(f.read())	
+        return str(f.read())
+
        
-    def test_03_raviDua1184040(self):
-        from Chapter02.raviDua1184040 import raviDua1184040,raviSemaphorewriteFile
-        threadwrite= raviSemaphorewriteFile("Thread write File ", 1,'nilai')
-        threadutama = raviDua1184040("Thread Utama ", 2,2,5,'nilai')
+    def test_03_raviTiga1184040(self):
+        from Chapter02.raviTiga1184040 import raviTiga1184040,ravieventwriteFile
+        threadwrite = ravieventwriteFile("Thread write File ", 1,'nilai')
+        threadutama = raviTiga1184040("Thread Utama ", 2,2,5,'nilai')
+        # threadutama.start()
         threadwrite.start()
         threadutama.start()
         threadwrite.join()
-        threadutama.join()
+        # threadutama.join()
         respon=self.readfile('./Chapter02/nilai.html')
         self.assertRegex(respon, "Nomor : 12345678910")
+        # self.setUp()
+       
 
 
 
