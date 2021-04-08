@@ -7,12 +7,12 @@ event = Event()
 hasilperhitungan=0
 
 class ravieventwriteFile (Thread):
-   def __init__(self,name,threadId,nomofile):
+   def __init__(self,name,threadId,nfile):
        Thread.__init__(self)    
        self.threadLock = Lock()
        self.name = name
        self.threadId = threadId
-       self.nomofile=os.path.join(os.path.dirname(__file__), nomofile)
+       self.nfile=os.path.join(os.path.dirname(__file__), nfile)
        self.threadEvent = event
 
    def run(self):
@@ -33,9 +33,9 @@ class ravieventwriteFile (Thread):
             # logging.info('Consumer notify: {} popped by {}'.format(item, self.name))
         # event.clear() # set event=false
             #  items = items.pop()
-        # print('baca file dong : '+self.nomofile)
+        # print('baca file dong : '+self.nfile)
         # self.readfile()
-        print('Tulis dan buat ulang file dong : '+self.nomofile)
+        print('Tulis dan buat ulang file dong : '+self.nfile)
         # self.writefile()
         # self.threadLock.release()
         # self.event.clear()
@@ -46,27 +46,27 @@ class ravieventwriteFile (Thread):
         self.threadEvent.clear()
 
    def readfile(self):
-       f = open(self.nomofile, "r+")
+       f = open(self.nfile, "r+")
        ##f.read(20) #Metode read(n) berfungsi untuk membaca sebanyak n karakter.
        print("Tampilin angkanya dong biar kita tau : \n "+f.read())
       
    def writefile(self):
-       f = open(self.nomofile, "r+")
-       fc = open(self.nomofile+'.html', "w")
+       f = open(self.nfile, "r+")
+       fc = open(self.nfile+'.html', "w")
        for line in f:
            fc.write(line.replace('Angka', 'Nomor'))
-       ff = open(self.nomofile+'.html', "r+")    
+       ff = open(self.nfile+'.html', "r+")    
        print(ff.read())
 
        
 class raviTiga1184040(Thread):
-   def __init__(self, name,threadId,r,f ,nomofile):
+   def __init__(self, name,threadId,r,f ,nfile):
        Thread.__init__(self)
        self.threadLock = Lock()
        self.threadEvent = event
        self.rlock = RLock()
        self.name = name
-       self.nomofile=os.path.join(os.path.dirname(__file__), nomofile)
+       self.nfile=os.path.join(os.path.dirname(__file__), nfile)
        self.threadId = threadId
        self.r=r
        self.f=f
@@ -95,14 +95,14 @@ class raviTiga1184040(Thread):
            string = " Angka : "
            i = 1
            for i in range(1, 11):
-               isinya = (0, 10)
+               isinya = (1, 11)
                items.append(isinya)
                string = string+str(i)
                i = i +1
            self.createfile(string)  
-           x = open(self.nomofile, "r+")
+           x = open(self.nfile, "r+")
            print(x.read())
-           isinya = (0, 10)
+           isinya = (1, 11)
            items.append(isinya)
         #    self.event.set()
            
@@ -112,8 +112,8 @@ class raviTiga1184040(Thread):
             self.apicount()
        
    def createfile(self,isi):
-       print('Buat file baru ya di : '+ self.nomofile)
-       f = open(self.nomofile, "w")
+       print('Buat file baru ya di : '+ self.nfile)
+       f = open(self.nfile, "w")
        f.write(str(isi))
        f.close()
        print('Done pembuatan file baru, Bersiaplah, Selanjutnya nih kite mau set event')
