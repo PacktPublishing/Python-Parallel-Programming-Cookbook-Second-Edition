@@ -115,8 +115,9 @@ class TestApp(unittest.TestCase):
     
     def readfile(self,filename):
         f = open(filename, "r")
-        return int(f.read())	
+        return str(f.read())	
        
+<<<<<<< HEAD
     #def test_03_zanwarDua1184050(self):
         #from Chapter02.ZanwarDua1184050 import zanwarDua1184050,zanwarRewrite
         #threadrewrite= zanwarRewrite("Thread Rewrite File ", 1,'nilai')
@@ -138,6 +139,69 @@ class TestApp(unittest.TestCase):
         #main.join()
        # self.assertGreaterEqual(main.getFileContent(),0 )
         
+    # def test_03_zanwarTiga1184050(self):
+    #     from Chapter02.ZanwarTiga1184050 import zanwarTiga1184050, zanwarRewrite
+    #     threadrewrite= zanwarRewrite("Thread Rewrite File ",1 , 'nilai')
+    #     threadutama = zanwarTiga1184050("Thread Utama ", 2, 1, 'nilai')
+    #     threadrewrite.start()
+    #     threadutama.start()
+    #     threadrewrite.join()
+    #     threadutama.join()
+    #     respon=self.readfile('./Chapter02/nilai.txt')
+    #     self.assertNotRegex(respon, "Kosong")
+    
+#    def test_03_WahyuKurniaSariDua1184001(self):
+ #       from Chapter02.WahyuKurniasariDua1184001 import WahyuKurniaSariSemaphoreDeleteFile,  WahyuKurniaSariDua1184001
+  #      delete = WahyuKurniaSariSemaphoreDeleteFile("Thread delete", 1,"pikachu")
+   #     main =  WahyuKurniaSariDua1184001("Thread utama", 2,"pikachu", "pikachu") 
+    #    delete.start()
+     #   main.start()
+      #  delete.join()
+       # main.join()
+        #self.assertGreaterEqual(main.getFileContent(),0 )
+
+    # def test_03_alifTiga1184068(self):
+    #     from Chapter02.alifTiga1184068 import alifTiga1184068,alifEventDeleteFile  
+    #     threadutama = alifTiga1184068("Thread Utama ", 2,5,5,'alip')
+    #     threaddelete= alifEventDeleteFile("Thread Delete File ", 1,'alip')
+    #     threaddelete.start()
+    #     threadutama.start()
+    #     threaddelete.join()
+    #     threadutama.join()
+    #     respon=self.readfile('./Chapter02/alip.txt')
+    #     self.assertNotRegex(respon, "kosong")
+
+
+    #def test_03_FerdyTiga1184112(self):
+     #   from Chapter02.FerdyTiga1184112 import FerdyGITiga1184112,FerdyEventGI
+      #  threadrewrite= FerdyEventGI("Thread Lain ", 1,'minuman')
+       # threadutama = FerdyGITiga1184112("Thread inti ", 2,'minuman')
+        #threadrewrite.start()
+#>>>>>>> 3aa81716bb58a3e7685425efe1259762e524b6aa
+ #       threadutama.start()
+  #      threadwrite.join()
+   #     threadutama.join()
+#<<<<<<< HEAD
+ #       respon=self.readfile('./Chapter02/josua1184091.txt')
+  #      self.assertRegex(respon, "Nomor : 18092001")
+        # self.setUp()
+
+
+#=======
+ #       respon=self.readfile('./Chapter02/minuman.txt')
+  #      self.assertNotRegex(respon, "Gak Boleh Kosong")
+	
+   # def test_03_hanifTiga1184058(self):
+    #    from Chapter02.HanifTiga1184058 import hanifTiga1184058, hanifRename
+     #  threadutama = hanifTiga1184058("Thread utama ", 2, 1, 'nilai')
+       # threadrename.start()
+        #threadutama.start()
+        #threadrename.join()
+        #threadutama.join()
+        #respon=self.readfile('./nilai.txt')
+        #self.assertNotRegex(respon, "Kosong")
+#>>>>>>> 3aa81716bb58a3e7685425efe1259762e524b6aa
+
 def test_03_josuaTiga1184091(self):
         from Chapter02.josuansefTiga1184091 import josua1184091_Catcher,josua1184091Write_Trier
         threadwrite = josua1184091Write_Trier("Thread write File ", 1,'josua')
@@ -150,5 +214,3 @@ def test_03_josuaTiga1184091(self):
         respon=self.readfile('./Chapter02/josua1184091.txt')
         self.assertRegex(respon, "Nomor : 18092001")
         # self.setUp()
-
-

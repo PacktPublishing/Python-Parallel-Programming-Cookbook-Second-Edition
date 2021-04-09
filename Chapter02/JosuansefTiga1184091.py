@@ -30,12 +30,12 @@ class josua1184091Write_Trier(threading.Thread):
                 f.write("hi are you okay number %d\r\n" % (i+1))
             
             if len(items) == 0:
-                logging.info('no items to consume')
+                logging.info('no items to try')
                 
                 condition.wait()
 
             items.pop()
-            logging.info('consumed 1 item')
+            logging.info('tried 1 item')
 
             condition.notify()
 
