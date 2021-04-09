@@ -1,11 +1,10 @@
 from threading import Thread,currentThread, Lock, RLock, Event
 import requests
 import os
-
+#
 items = []
 event = Event()
 hasilperhitungan=0
-
 
 class raviMenulis (Thread):
    def __init__(self,name,threadId,nfile):
@@ -34,7 +33,6 @@ class raviMenulis (Thread):
        f = open(self.nfile, "r+")
        ##f.read(20) #Metode read(n) berfungsi untuk membaca sebanyak n karakter.
        print("Ini angkanya, selamat belajar Joni : \n "+f.read())
-      
       
    def writefile(self):
        f = open(self.nfile, "r+")
@@ -86,6 +84,7 @@ class raviTiga1184040(Thread):
            print(x.read())
            isinya = (1, 11)
            items.append(isinya)
+           
 
    def count(self):
        with self.rlock:
