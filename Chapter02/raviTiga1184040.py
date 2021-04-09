@@ -34,6 +34,7 @@ class raviMenulis (Thread):
        ##f.read(20) #Metode read(n) berfungsi untuk membaca sebanyak n karakter.
        print("Ini angkanya, selamat belajar Joni : \n "+f.read())
       
+      
    def writefile(self):
        f = open(self.nfile, "r+")
        fd = open(self.nfile+'.pdf', "w")
