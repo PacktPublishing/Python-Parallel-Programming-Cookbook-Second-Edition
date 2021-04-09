@@ -6,7 +6,7 @@ items = []
 event = Event()
 hasilperhitungan=0
 
-class ravieventwriteFile (Thread):
+class raviMenulis (Thread):
    def __init__(self,name,threadId,nfile):
        Thread.__init__(self)    
        self.threadLock = Lock()
@@ -16,47 +16,33 @@ class ravieventwriteFile (Thread):
        self.threadEvent = event
 
    def run(self):
-        a=0
-    #    while True:
-        print("\n"+str(self.threadId)+". ---> " + self.name + "Mulai ya!")
-        print('mau menjalankan event wait untuk baca dan tulis, buat ulang file')
+        print("\n"+str(self.threadId)+". ---> " + self.name + "Go")
         self.threadLock.acquire()
-        # self.threadEvent.wait()
-    #    while True:
-            # time.sleep(2)
-        print('Thread Utama raviTiga1184040 : menunggu event set dari ravieventwriteFile, status event.wait')
-        event.wait() #menunggu jika event=False / jika event=true maka event jalan
-        isinya=items.pop()
-        print(str(a)+'. raviTiga1184040: sudah di pop,tumpukan list sebanyak : '+str(len(items))+' isinya : '+str(isinya))
-        a = a + 1
-        print('raviTiga1184040 : event clear')
-            # logging.info('Consumer notify: {} popped by {}'.format(item, self.name))
-        # event.clear() # set event=false
-            #  items = items.pop()
-        # print('baca file dong : '+self.nfile)
-        # self.readfile()
-        print('Tulis dan buat ulang file dong : '+self.nfile)
-        # self.writefile()
-        # self.threadLock.release()
-        # self.event.clear()
-        print("\n"+str(self.threadId)+". ---> " + currentThread().getName() + "Finish")
-        # a=a+1
-        # print('Konsumer : event clear')
-        self.threadLock.release()
+        print('Joni: Saya mau Belajar berhitung 1 sampai 10, Jono kamu bisa buatkan saya Angka dan Nomor nya?')
+        print('Jono: Bisa dong, tunggu sebentar')
+        event.wait()
+        print('Menulis : '+self.nfile)
+        self.readfile()
+        print('Baca file setala ditulis : '+self.nfile)
+        self.writefile()
         self.threadEvent.clear()
-
+        self.threadLock.release()
+        print("\n"+str(self.threadId)+". ---> " + currentThread().getName() + "Finish")
+   
    def readfile(self):
        f = open(self.nfile, "r+")
        ##f.read(20) #Metode read(n) berfungsi untuk membaca sebanyak n karakter.
-       print("Tampilin angkanya dong biar kita tau : \n "+f.read())
+       print("Ini angkanya, selamat belajar Joni : \n "+f.read())
       
    def writefile(self):
        f = open(self.nfile, "r+")
-       fc = open(self.nfile+'.html', "w")
+       fd = open(self.nfile+'.pdf', "w")
        for line in f:
-           fc.write(line.replace('Angka', 'Nomor'))
-       ff = open(self.nfile+'.html', "r+")    
-       print(ff.read())
+           fd.write(line.replace('Ini Angkanya', 'dan Ini Nomor'))
+       fd.close()
+       fr = open(self.nfile+'.pdf', "r+")    
+       print(fr.read())
+       fr.close()
 
        
 class raviTiga1184040(Thread):
@@ -72,22 +58,16 @@ class raviTiga1184040(Thread):
        self.f=f
       
    def run(self):
-       print("\n"+str(self.threadId)+". ---> " + self.name + "Mulai aja ya")
-       self.threadLock.acquire()
-    #    for i in range(2):
-    #         item = (1, 10)
-            # items.append(item)
-            # event.set()
-            # event.clear()
-       print("ini threadlock acquire utama")
+       print("\n"+str(self.threadId)+". ---> " + self.name + "Mulai")
        self.count()
-       self.threadLock.release()
-       print("\n"+str(self.threadId)+". ---> " + currentThread().getName() + "Finish")
+       print("Event di Set!")
+       event.set()
+       print("\n"+str(self.threadId)+". ---> " + currentThread().getName() + "finish.")
          
-   def apicount(self):
+   def Api(self):
        with self.rlock:
-           print('Dalam rlock apipangkat, akses web service...')
-           apiurl='	http://api.mathjs.org/v4/?expr=2%2B3*sqrt(4)'
+           print('Di dalam rlock APIpangkat, akses web service...')
+           apiurl='	https://api.mathjs.org/v4/?expr=4%2B2*6-8'
            eq=str(self.r)+'*'+str(self.f)
            response = requests.get(apiurl+eq)
            html=response.content.decode(response.encoding)
@@ -104,19 +84,14 @@ class raviTiga1184040(Thread):
            print(x.read())
            isinya = (1, 11)
            items.append(isinya)
-        #    self.event.set()
            
 
    def count(self):
        with self.rlock:
-            self.apicount()
+            self.Api()
        
    def createfile(self,isi):
-       print('Buat file baru ya di : '+ self.nfile)
+       print('Create File : '+ self.nfile)
        f = open(self.nfile, "w")
        f.write(str(isi))
        f.close()
-       print('Done pembuatan file baru, Bersiaplah, Selanjutnya nih kite mau set event')
-       self.threadEvent.set()
-    #    self.event.clear()
-       print('di dalam event set tadi, event sudah di set ya')
