@@ -133,8 +133,14 @@ class TestApp(unittest.TestCase):
         threadutama.join()
         respon=self.readfile('./Chapter02/minuman.txt')
         self.assertNotRegex(respon, "Gak Boleh Kosong")
-
-
-
-
-  
+	
+    def test_03_hanifTiga1184058(self):
+        from Chapter02.HanifTiga1184058 import hanifTiga1184058, hanifRename
+        threadrename= hanifRename("Thread rename file ",1 , 'nilai')
+        threadutama = hanifTiga1184058("Thread utama ", 2, 1, 'nilai')
+        threadrename.start()
+        threadutama.start()
+        threadrename.join()
+        threadutama.join()
+        respon=self.readfile('./nilai.txt')
+        self.assertNotRegex(respon, "Kosong")
