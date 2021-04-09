@@ -123,24 +123,37 @@ class TestApp(unittest.TestCase):
     #     self.assertNotRegex(respon, "kosong")
 
 
-    def test_03_FerdyTiga1184112(self):
-        from Chapter02.FerdyTiga1184112 import FerdyGITiga1184112,FerdyEventGI
-        threadrewrite= FerdyEventGI("Thread Lain ", 1,'minuman')
-        threadutama = FerdyGITiga1184112("Thread inti ", 2,'minuman')
-        threadrewrite.start()
-        threadutama.start()
-        threadrewrite.join()
-        threadutama.join()
-        respon=self.readfile('./Chapter02/minuman.txt')
-        self.assertNotRegex(respon, "Gak Boleh Kosong")
+    # def test_03_FerdyTiga1184112(self):
+    #     from Chapter02.FerdyTiga1184112 import FerdyGITiga1184112,FerdyEventGI
+    #     threadrewrite= FerdyEventGI("Thread Lain ", 1,'minuman')
+    #     threadutama = FerdyGITiga1184112("Thread inti ", 2,'minuman')
+    #     threadrewrite.start()
+    #     threadutama.start()
+    #     threadrewrite.join()
+    #     threadutama.join()
+    #     respon=self.readfile('./Chapter02/minuman.txt')
+    #     self.assertNotRegex(respon, "Gak Boleh Kosong")
 	
-    def test_03_hanifTiga1184058(self):
-        from Chapter02.HanifTiga1184058 import hanifTiga1184058, hanifRename
-        threadrename= hanifRename("Thread rename file ",1 , 'nilai')
-        threadutama = hanifTiga1184058("Thread utama ", 2, 1, 'nilai')
-        threadrename.start()
+    # def test_03_hanifTiga1184058(self):
+    #     from Chapter02.HanifTiga1184058 import hanifTiga1184058, hanifRename
+    #     threadrename= hanifRename("Thread rename file ",1 , 'nilai')
+    #     threadutama = hanifTiga1184058("Thread utama ", 2, 1, 'nilai')
+    #     threadrename.start()
+    #     threadutama.start()
+    #     threadrename.join()
+    #     threadutama.join()
+    #     respon=self.readfile('./nilai.txt')
+    #     self.assertNotRegex(respon, "Kosong")
+
+    def test_03_idaTiga1184113(self):
+        from Chapter02.idaTiga1184113 import ida1184113_Catcher,ida1184113Write_Trier
+        threadwrite = ida1184113Write_Trier("Thread write File ", 1,'ida')
+        threadutama = ida1184113_Catcher("Thread Utama ", 2,2,5,'ida')
+        # threadutama.start()
+        threadwrite.start()
         threadutama.start()
-        threadrename.join()
+        threadwrite.join()
         threadutama.join()
-        respon=self.readfile('./nilai.txt')
-        self.assertNotRegex(respon, "Kosong")
+        respon=self.readfile('./Chapter02/idanilai.txt')
+        self.assertRegex(respon, "Nomor : 14102000")
+        # self.setUp()
