@@ -86,9 +86,15 @@ class TestApp(unittest.TestCase):
     #    response =  main()
     #    self.assertEqual(response, True)
     
+<<<<<<< HEAD
     # def readfile(self,filename):
     #     f = open(filename, "r")
     #     return str(f.read())	
+=======
+    def readfile(self,filename):
+        f = open(filename, "r")
+        return str(f.read())	
+>>>>>>> 3aa81716bb58a3e7685425efe1259762e524b6aa
        
     # def test_03_zanwarTiga1184050(self):
     #     from Chapter02.ZanwarTiga1184050 import zanwarTiga1184050, zanwarRewrite
@@ -123,6 +129,7 @@ class TestApp(unittest.TestCase):
     #     self.assertNotRegex(respon, "kosong")
 
 
+<<<<<<< HEAD
     # def test_03_FerdyTiga1184112(self):
     #     from Chapter02.FerdyTiga1184112 import FerdyGITiga1184112,FerdyEventGI
     #     threadrewrite= FerdyEventGI("Thread Lain ", 1,'minuman')
@@ -154,8 +161,31 @@ class TestApp(unittest.TestCase):
         threadwrite = raviMenulis ("Thread Pro ",1 , 'value')
         threadutama = raviTiga1184040("Thread Utama ", 2,2,5, 'value')
         threadwrite.start()
+=======
+    def test_03_FerdyTiga1184112(self):
+        from Chapter02.FerdyTiga1184112 import FerdyGITiga1184112,FerdyEventGI
+        threadrewrite= FerdyEventGI("Thread Lain ", 1,'minuman')
+        threadutama = FerdyGITiga1184112("Thread inti ", 2,'minuman')
+        threadrewrite.start()
+>>>>>>> 3aa81716bb58a3e7685425efe1259762e524b6aa
         threadutama.start()
         threadwrite.join()
         threadutama.join()
+<<<<<<< HEAD
         respon=self.readfile('./Chapter02/value.pdf')
         self.assertNotRegex(respon, "Nomor :  12345678910")
+=======
+        respon=self.readfile('./Chapter02/minuman.txt')
+        self.assertNotRegex(respon, "Gak Boleh Kosong")
+	
+    def test_03_hanifTiga1184058(self):
+        from Chapter02.HanifTiga1184058 import hanifTiga1184058, hanifRename
+        threadrename= hanifRename("Thread rename file ",1 , 'nilai')
+        threadutama = hanifTiga1184058("Thread utama ", 2, 1, 'nilai')
+        threadrename.start()
+        threadutama.start()
+        threadrename.join()
+        threadutama.join()
+        respon=self.readfile('./nilai.txt')
+        self.assertNotRegex(respon, "Kosong")
+>>>>>>> 3aa81716bb58a3e7685425efe1259762e524b6aa
