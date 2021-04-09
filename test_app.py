@@ -138,15 +138,17 @@ class TestApp(unittest.TestCase):
         #main.join()
        # self.assertGreaterEqual(main.getFileContent(),0 )
         
-    def test_03_JosuaDua1184091(self):
-        from Chapter02.JosuansefDua_1184091 import josua1184091Arrangement, josua1184091Api
-        threadarrange= josua1184091Arrangement("Thread Utama arrangement file ", 1,'arrangement')
-        threadutama =  josua1184091Api("Thread api file ", 2,2,5,'arrangement')
-        threadarrange.start()
+def test_03_josuaTiga1184091(self):
+        from Chapter02.josuansefTiga1184091 import josua1184091_Catcher,josua1184091Write_Trier
+        threadwrite = josua1184091Write_Trier("Thread write File ", 1,'josua')
+        threadutama = josua1184091_Catcher("Thread Utama ", 2,2,5,'josua')
+        # threadutama.start()
+        threadwrite.start()
         threadutama.start()
-        threadarrange.join()
+        threadwrite.join()
         threadutama.join()
-        respon=self.readfile('./Chapter02/hasil.txt')
-        self.assertGreaterEqual(respon, 0)
+        respon=self.readfile('./Chapter02/josua1184091.txt')
+        self.assertRegex(respon, "Nomor : 18092001")
+        # self.setUp()
 
 
