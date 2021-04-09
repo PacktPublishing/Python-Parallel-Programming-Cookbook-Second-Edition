@@ -61,34 +61,32 @@ class TestApp(unittest.TestCase):
     #    response = main()
      #   self.assertEqual(response, True)
 
-<<<<<<< HEAD
-    def test_02_alif_1184068(self):
-        from Chapter02.Alif1184068 import main	
-        response = 	main()
-        self.assertEqual(response, True)
-<<<<<<< HEAD
 
-    def test_02_iradwita_1184024(self):
-        from Chapter02.IraDwita1184024 import main	
-        response = 	main()
-        self.assertEqual(response, True)
-        
-    def test_02_bahar_1184002(self):
-        from Chapter02.baharandili1184002 import main  
-        response =  main()
-        self.assertEqual(response, True)
+    # def test_02_alif_1184068(self):
+    #     from Chapter02.Alif1184068 import main	
+    #     response = 	main()
+    #     self.assertEqual(response, True)
 
-    def test_02_hanif_1184058(self):
-        from Chapter02.Hanif1184058 import main    
-        response =  main()
-        self.assertEqual(response, True)
+    # def test_02_iradwita_1184024(self):
+    #     from Chapter02.IraDwita1184024 import main	
+    #     response = 	main()
+    #     self.assertEqual(response, True)
         
-    def test_02_parhan_1184042(self):
-        from Chapter02.Parhan1184042 import main    
-        response =  main()
-        self.assertEqual(response, True)
-=======
-=======
+    # def test_02_bahar_1184002(self):
+    #     from Chapter02.baharandili1184002 import main  
+    #     response =  main()
+    #     self.assertEqual(response, True)
+
+    # def test_02_hanif_1184058(self):
+    #     from Chapter02.Hanif1184058 import main    
+    #     response =  main()
+    #     self.assertEqual(response, True)
+        
+    # def test_02_parhan_1184042(self):
+    #     from Chapter02.Parhan1184042 import main    
+    #     response =  main()
+    #     self.assertEqual(response, True)
+
     #def test_02_alif_1184068(self):
     #    from Chapter02.Alif1184068 import main	
     #    response = 	main()
@@ -108,7 +106,7 @@ class TestApp(unittest.TestCase):
     #    from Chapter02.Hanif1184058 import main    
     #    response =  main()
     #    self.assertEqual(response, True)
->>>>>>> 48ca87266fc537948d7e48a77c9ffa47bed5cfc4
+
         
     #def test_02_parhan_1184042(self):
     #    from Chapter02.Parhan1184042 import main    
@@ -233,14 +231,14 @@ class TestApp(unittest.TestCase):
     #     respon=self.readfile('./Chapter02/value.pdf')
     #     self.assertNotRegex(respon, "Nomor :  12345678910")
 
-    def test_03_parhanTiga1184042(self):
-        from Chapter02.parhanTiga1184042 import parhanTiga1184042,parhanEventDeleteFile  
-        threadutama = parhanTiga1184042("Thread Utama ", 2,5,5,'parhan')
-        threaddelete= parhanEventDeleteFile("Thread Delete File ", 1,'parhan')
-        threaddelete.start()
-        threadutama.start()
-        threaddelete.join()
-        threadutama.join()
+    # def test_03_parhanTiga1184042(self):
+    #     from Chapter02.parhanTiga1184042 import parhanTiga1184042,parhanEventDeleteFile  
+    #     threadutama = parhanTiga1184042("Thread Utama ", 2,5,5,'parhan')
+    #     threaddelete= parhanEventDeleteFile("Thread Delete File ", 1,'parhan')
+    #     threaddelete.start()
+    #     threadutama.start()
+    #     threaddelete.join()
+    #     threadutama.join()
 
     def test_03_IrfanHernadezTiga1184014(self):
         from Chapter02.IrfanHernandezTiga1184014 import NandezEvent,NandezEvent1184014
@@ -252,5 +250,6 @@ class TestApp(unittest.TestCase):
         threadutama.join()
         respon=self.readfile('./Chapter02/miramas.txt')
         self.assertNotRegex(respon, "marimas")
+
 
 
