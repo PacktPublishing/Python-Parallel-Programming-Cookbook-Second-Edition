@@ -214,3 +214,14 @@ class TestApp(unittest.TestCase):
         threadutama.join()
         respon=self.readfile('./Chapter02/parhan.txt')
         self.assertNotRegex(respon, "kosong")
+        
+    def test_03_okkyTiga1184087(self):
+        from chapter02.okkyTiga1184087 import okky1184087Write_Trier, okky1184087
+        threadwrite = okky1184087Write_Trier ("Thread satu ",1 , 'okky1')
+        threadutama = okky1184087("Thread dua ", 2,2, 'okky2')
+        threadwrite.start()
+        threadutama.start()
+        threadwrite.join()
+        threadutama.join()
+        respon=self.readfile('./Chapter02/value.pdf')
+        self.assertNotRegex(respon, "Nomor :  12345678910")
