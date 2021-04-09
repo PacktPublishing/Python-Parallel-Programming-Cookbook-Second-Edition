@@ -188,7 +188,7 @@ class TestApp(unittest.TestCase):
     #     threadutama.join()
     #     respon=self.readfile('./nilai.txt')
     #     self.assertNotRegex(respon, "Kosong")
-
+    #
     def readfile(self,nfile):
         f = open(nfile, "r+")
         return str(f.read())	
