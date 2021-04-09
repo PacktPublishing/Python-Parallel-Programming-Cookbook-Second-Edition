@@ -86,7 +86,6 @@ class raviTiga1184040(Thread):
            print(x.read())
            isinya = (1, 11)
            items.append(isinya)
-           
 
    def count(self):
        with self.rlock:
