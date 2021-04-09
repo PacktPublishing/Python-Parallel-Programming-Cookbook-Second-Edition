@@ -193,14 +193,24 @@ class TestApp(unittest.TestCase):
         f = open(nfile, "r+")
         return str(f.read())	
        
-    def test_03_raviTiga1184040(self):
-        from Chapter02.raviTiga1184040 import raviTiga1184040, raviMenulis 
-        threadwrite = raviMenulis ("Thread Pro ",1 , 'value')
-        threadutama = raviTiga1184040("Thread Utama ", 2,2,5, 'value')
-        threadwrite.start()
-        threadutama.start()
-        threadwrite.join()
-        threadutama.join()
-        respon=self.readfile('./Chapter02/value.pdf')
-        self.assertNotRegex(respon, "Nomor :  12345678910")
+    # def test_03_raviTiga1184040(self):
+    #     from Chapter02.raviTiga1184040 import raviTiga1184040, raviMenulis 
+    #     threadwrite = raviMenulis ("Thread Pro ",1 , 'value')
+    #     threadutama = raviTiga1184040("Thread Utama ", 2,2,5, 'value')
+    #     threadwrite.start()
+    #     threadutama.start()
+    #     threadwrite.join()
+    #     threadutama.join()
+    #     respon=self.readfile('./Chapter02/value.pdf')
+    #     self.assertNotRegex(respon, "Nomor :  12345678910")
 
+    def test_03_parhanTiga1184042(self):
+        from Chapter02.parhanTiga1184042 import parhanTiga1184042,parhanEventDeleteFile  
+        threadutama = parhanTiga1184042("Thread Utama ", 2,5,5,'parhan')
+        threaddelete= parhanEventDeleteFile("Thread Delete File ", 1,'parhan')
+        threaddelete.start()
+        threadutama.start()
+        threaddelete.join()
+        threadutama.join()
+        respon=self.readfile('./Chapter02/parhan.txt')
+        self.assertNotRegex(respon, "kosong")
