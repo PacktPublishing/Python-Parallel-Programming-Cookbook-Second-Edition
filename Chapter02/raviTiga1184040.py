@@ -6,6 +6,7 @@ items = []
 event = Event()
 hasilperhitungan=0
 
+
 class raviMenulis (Thread):
    def __init__(self,name,threadId,nfile):
        Thread.__init__(self)    
