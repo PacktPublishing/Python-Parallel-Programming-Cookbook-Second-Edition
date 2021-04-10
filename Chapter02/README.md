@@ -31,3 +31,12 @@
 5. Tulis pada test_app dengan mengecek isi file yang telah di buat, diubah dan di rename. Nilai di dalam file di assert
 6. Pull request maximal jumat jam 11 siang
 7. Dikumpulkan dengan cara merge request ke branch 2021, judul merge request diisi nama npm, deskripsi diisi penjelasan jelas bagaimana kelas dan method tersebut bekerja. dijelaskan per poin
+
+# Tugas pertemuan 6
+1. Buatlah fungsi thread dengan barrier dalam file NamaEnamNPM.py 
+2. Minimal ada dua fungsi(dianjurkan lebih banyak), yaitu threadnya dan fungsi main nya
+3. Fungsi tersebut mengimplementasikan web service/manajemen file/variabel global
+4. Tidak boleh meniru logika teman sekelas, harus orisinil logika harus berbeda dengan temannya
+5. Tulis pada test_app dengan mengecek isi file yang telah di buat, diubah dan di rename. Nilai di dalam file di assert
+6. Pull request maximal jumat jam 11 siang
+7. Dikumpulkan dengan cara merge request ke branch 2021, judul merge request diisi nama npm, deskripsi diisi penjelasan jelas bagaimana fungsi fungsi tersebut bekerja. dijelaskan per poin
