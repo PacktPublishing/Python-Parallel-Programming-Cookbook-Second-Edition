@@ -61,12 +61,13 @@ class zanwarTiga1184050 (threading.Thread):
    def randomapi(self):
        with self.rlock:
            print('Inside rlock apipangkat, akses web service...')
-           apiurl='https://digimon-api.herokuapp.com/api/digimon'
-           response = requests.get(apiurl)
+           apiurl='https://goquotes-api.herokuapp.com/api/v1/random?'
+           eq='count='+str(self.a)
+           response = requests.get(apiurl+eq)
            html=response.json()
            string = "Quotes : "
            for i in range(len(html["quotes"])):
-               hasil = html[i]["name"]
+               hasil = html["quotes"][i]["text"]
                tulis = "\n"+str(i)+". "
                string = string+tulis+str(hasil)
            self.createfile(string)  
@@ -83,6 +84,3 @@ class zanwarTiga1184050 (threading.Thread):
        f.write(str(isi))
        f.close()
        
-       
-       
-
