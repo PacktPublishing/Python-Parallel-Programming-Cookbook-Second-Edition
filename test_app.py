@@ -234,3 +234,12 @@ class TestApp(unittest.TestCase):
         from Chapter02.ParhanEnam1184042 import main
         response =  main()
         self.assertEqual(response, True)
+   
+    def test_06_WahyuKurniaSari_1184001(self):
+        from Chapter02.WahyuKurniaSariEnam1184001 import main
+        result=main()
+        self.assertEqual(result, True)
+        
+      
+
+
