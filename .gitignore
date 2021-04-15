@@ -128,3 +128,16 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Croot
+*.croot
+ani.croot
+anu.croot
+ano.croot
+nilai.html
+nilai
+nilai.txt
+value
+value.txt
+value
+value.pdf
