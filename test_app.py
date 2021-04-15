@@ -204,13 +204,18 @@ class TestApp(unittest.TestCase):
     #     respon=self.readfile('./Chapter02/value.pdf')
     #     self.assertNotRegex(respon, "Nomor :  12345678910")
 
-    def test_03_parhanTiga1184042(self):
-        from Chapter02.parhanTiga1184042 import parhanTiga1184042,parhanEventDeleteFile  
-        threadutama = parhanTiga1184042("Thread Utama ", 2,5,5,'parhan')
-        threaddelete= parhanEventDeleteFile("Thread Delete File ", 1,'parhan')
-        threaddelete.start()
-        threadutama.start()
-        threaddelete.join()
-        threadutama.join()
-        respon=self.readfile('./Chapter02/parhan.txt')
-        self.assertNotRegex(respon, "kosong")
+    # def test_03_parhanTiga1184042(self):
+    #     from Chapter02.parhanTiga1184042 import parhanTiga1184042,parhanEventDeleteFile  
+    #     threadutama = parhanTiga1184042("Thread Utama ", 2,5,5,'parhan')
+    #     threaddelete= parhanEventDeleteFile("Thread Delete File ", 1,'parhan')
+    #     threaddelete.start()
+    #     threadutama.start()
+    #     threaddelete.join()
+    #     threadutama.join()
+    #     respon=self.readfile('./Chapter02/parhan.txt')
+    #     self.assertNotRegex(respon, "kosong")
+
+    def test_06_Ferdy_1184112(self):
+        from Chapter02.FerdyEnam1184112 import main
+        response =  main()
+        self.assertEqual(response, True)
