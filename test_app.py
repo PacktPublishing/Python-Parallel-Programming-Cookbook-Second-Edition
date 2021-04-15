@@ -215,13 +215,18 @@ class TestApp(unittest.TestCase):
     #     respon=self.readfile('./Chapter02/parhan.txt')
     #     self.assertNotRegex(respon, "kosong")
 
-    def test_06_Ferdy_1184112(self):
-        from Chapter02.FerdyEnam1184112 import main
-        response =  main()
-        self.assertEqual(response, True)
+    # def test_06_Ferdy_1184112(self):
+    #     from Chapter02.FerdyEnam1184112 import main
+    #     response =  main()
+    #     self.assertEqual(response, True)
 
-    def test_06_zanwar_1184050(self):
-        from Chapter02.ZanwarEnam1184050 import main
+    # def test_06_zanwar_1184050(self):
+    #     from Chapter02.ZanwarEnam1184050 import main
+    #     response =  main()
+    #     self.assertEqual(response, True)
+    
+    def test_06_alif_1184068(self):
+        from Chapter02.AlifEnam1184068 import main
         response =  main()
         self.assertEqual(response, True)
 
