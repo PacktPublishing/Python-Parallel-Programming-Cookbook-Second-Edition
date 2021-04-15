@@ -1,1 +1,0 @@
-[{'name': 'Indonesia', 'positif': '1,589,359', 'sembuh': '1,438,254', 'meninggal': '43,073', 'dirawat': '108,032'}]
