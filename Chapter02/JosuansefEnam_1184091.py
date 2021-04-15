@@ -14,20 +14,20 @@ batas = Barrier(jenis_file)
 file = "movie_2020_"
 filename = os.path.join(os.path.dirname(__file__), file)
 
-def ApiJosuansef1184091():
-    url = "https://movie-database-imdb-alternative.p.rapidapi.com/"
 
-    querystring = {"s":"Avengers Endgame","page":"1","r":"json"}
+def ApiJosuansef1184091():  
+        url = "https://movie-database-imdb-alternative.p.rapidapi.com/"
+        querystring = {"s":"Avengers Endgame","page":"1","r":"json"}
 
-    headers = {
-    'x-rapidapi-key': "03ea4d51b5mshde64ddab3687a71p1fb88fjsn3c194b2ea8bc",
-    'x-rapidapi-host': "movie-database-imdb-alternative.p.rapidapi.com"
-    }
+        headers = {
+            'x-rapidapi-key': "03ea4d51b5mshde64ddab3687a71p1fb88fjsn3c194b2ea8bc",
+            'x-rapidapi-host': "movie-database-imdb-alternative.p.rapidapi.com"
+            }
 
-    response = requests.request("GET", url, headers=headers, params=querystring)
-    html=response.json()
-    print(response.text)
-    Josuansef1184091_CreateAppendFile(html)
+        response = requests.request("GET", url, headers=headers, params=querystring)
+        html=response.json()
+        print(response.text)
+        Josuansef1184091_CreateAppendFile(html)
 
 def Josuansef1184091_CreateAppendFile(konten):
        for i in range(2):
@@ -63,5 +63,5 @@ def main():
     print('UDAH UDAH! UDAH SELESAI GUYS!')
     return True
 
-if __name__ == "__main__":
- main() 
+#if __name__ == "__main__":
+# main() 

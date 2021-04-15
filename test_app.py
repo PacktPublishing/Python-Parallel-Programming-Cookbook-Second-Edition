@@ -25,10 +25,6 @@ class TestApp(unittest.TestCase):
 #        response = multiprocessing_test.multiprocessing_test()
 #        self.assertEqual(response, True)
 		
-<<<<<<< HEAD
-
-=======
->>>>>>> 05681a40c1f1600886af7de701d3a93641396e74
     # def test_02_kaisar_1184093(self):
     #     from Chapter02.Kaisar1184093 import main	
     #     response = 	main()
@@ -125,8 +121,7 @@ class TestApp(unittest.TestCase):
     #     f = open(filename, "r")
     #     return str(f.read())	
 
-       
-<<<<<<< HEAD
+
     #def test_03_zanwarDua1184050(self):
         #from Chapter02.ZanwarDua1184050 import zanwarDua1184050,zanwarRewrite
         #threadrewrite= zanwarRewrite("Thread Rewrite File ", 1,'nilai')
@@ -180,8 +175,6 @@ class TestApp(unittest.TestCase):
     #     respon=self.readfile('./Chapter02/alip.txt')
     #     self.assertNotRegex(respon, "kosong")
 
-
-<<<<<<< HEAD
     #def test_03_FerdyTiga1184112(self):
      #   from Chapter02.FerdyTiga1184112 import FerdyGITiga1184112,FerdyEventGI
       #  threadrewrite= FerdyEventGI("Thread Lain ", 1,'minuman')
@@ -224,7 +217,7 @@ class TestApp(unittest.TestCase):
         #respon=self.readfile('./Chapter02/josua1184091.txt')
         #self.assertRegex(respon, "Nomor : 18092001")
         # self.setUp()
-=======
+
 
     # def test_03_FerdyTiga1184112(self):
     #     from Chapter02.FerdyTiga1184112 import FerdyGITiga1184112,FerdyEventGI
@@ -333,6 +326,6 @@ class TestApp(unittest.TestCase):
         
     def test_06_josuansef_1184091(self):
         from Chapter02.JosuansefEnam_1184091 import main
-        response =  main()
+        response = main()
         self.assertEqual(response, True)
 
