@@ -6,8 +6,6 @@ nomor = 1
 finish = Barrier(nomor)
 yuhu = []
 
-
-
 def webservice():
     apiurl='https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list'
     response = requests.get(apiurl)
@@ -15,7 +13,6 @@ def webservice():
     for i in range(len(html["drinks"])):
         cocokin = html["drinks"][i]
         yuhu.append(cocokin)
-
 
 def bacafile():
     f = open("barrier.txt", "r")
@@ -32,7 +29,6 @@ def utama():
     f.write(str(yuhu))
     f.close()
     bacafile()
-
 
 def main ():
     hiya=[]
