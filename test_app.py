@@ -25,7 +25,10 @@ class TestApp(unittest.TestCase):
 #        response = multiprocessing_test.multiprocessing_test()
 #        self.assertEqual(response, True)
 		
+<<<<<<< HEAD
 
+=======
+>>>>>>> 05681a40c1f1600886af7de701d3a93641396e74
     # def test_02_kaisar_1184093(self):
     #     from Chapter02.Kaisar1184093 import main	
     #     response = 	main()
@@ -113,9 +116,15 @@ class TestApp(unittest.TestCase):
     #    response =  main()
     #    self.assertEqual(response, True)
     
-    def readfile(self,filename):
-        f = open(filename, "r")
-        return str(f.read())	
+
+    # def readfile(self,filename):
+    #     f = open(filename, "r")
+    #     return str(f.read())	
+
+    # def readfile(self,filename):
+    #     f = open(filename, "r")
+    #     return str(f.read())	
+
        
 <<<<<<< HEAD
     #def test_03_zanwarDua1184050(self):
@@ -172,6 +181,7 @@ class TestApp(unittest.TestCase):
     #     self.assertNotRegex(respon, "kosong")
 
 
+<<<<<<< HEAD
     #def test_03_FerdyTiga1184112(self):
      #   from Chapter02.FerdyTiga1184112 import FerdyGITiga1184112,FerdyEventGI
       #  threadrewrite= FerdyEventGI("Thread Lain ", 1,'minuman')
@@ -214,3 +224,110 @@ def test_03_josuaTiga1184091(self):
         respon=self.readfile('./Chapter02/josua1184091.txt')
         self.assertRegex(respon, "Nomor : 18092001")
         # self.setUp()
+=======
+
+    # def test_03_FerdyTiga1184112(self):
+    #     from Chapter02.FerdyTiga1184112 import FerdyGITiga1184112,FerdyEventGI
+    #     threadrewrite= FerdyEventGI("Thread Lain ", 1,'minuman')
+    #     threadutama = FerdyGITiga1184112("Thread inti ", 2,'minuman')
+    #     threadrewrite.start()
+    #     threadutama.start()
+    #     threadrewrite.join()
+    #     threadutama.join()
+    #     respon=self.readfile('./Chapter02/minuman.txt')
+    #     self.assertNotRegex(respon, "Gak Boleh Kosong")
+	
+    # def test_03_hanifTiga1184058(self):
+    #     from Chapter02.HanifTiga1184058 import hanifTiga1184058, hanifRename
+    #     threadrename= hanifRename("Thread rename file ",1 , 'nilai')
+    #     threadutama = hanifTiga1184058("Thread utama ", 2, 1, 'nilai')
+    #     threadrename.start()
+    #     threadutama.start()
+    #     threadrename.join()
+    #     threadutama.join()
+    #     respon=self.readfile('./nilai.txt')
+    #     self.assertNotRegex(respon, "Kosong")
+    # def readfile(self,nfile):
+    #     f = open(nfile, "r+")
+    #     return str(f.read())	
+       
+       
+    # def test_03_raviTiga1184040(self):
+    #     from Chapter02.raviTiga1184040 import raviTiga1184040, raviMenulis 
+    #     threadwrite = raviMenulis ("Thread Pro ",1 , 'value')
+    #     threadutama = raviTiga1184040("Thread Utama ", 2,2,5, 'value')
+    #     threadwrite.start()
+
+    # def test_03_FerdyTiga1184112(self):
+    #     from Chapter02.FerdyTiga1184112 import FerdyGITiga1184112,FerdyEventGI
+    #     threadrewrite= FerdyEventGI("Thread Lain ", 1,'minuman')
+    #     threadutama = FerdyGITiga1184112("Thread inti ", 2,'minuman')
+    #     threadrewrite.start()
+
+    #     threadutama.start()
+    #     threadwrite.join()
+    #     threadutama.join()
+
+    #     respon=self.readfile('./Chapter02/value.pdf')
+    #     self.assertNotRegex(respon, "Nomor :  12345678910")
+
+    #     respon=self.readfile('./Chapter02/minuman.txt')
+    #     self.assertNotRegex(respon, "Gak Boleh Kosong")
+	
+    # def test_03_hanifTiga1184058(self):
+    #     from Chapter02.HanifTiga1184058 import hanifTiga1184058, hanifRename
+    #     threadrename= hanifRename("Thread rename file ",1 , 'nilai')
+    #     threadutama = hanifTiga1184058("Thread utama ", 2, 1, 'nilai')
+    #     threadrename.start()
+    #     threadutama.start()
+    #     threadrename.join()
+    #     threadutama.join()
+    #     respon=self.readfile('./nilai.txt')
+    #     self.assertNotRegex(respon, "Kosong")
+    #
+    def readfile(self,nfile):
+        f = open(nfile, "r+")
+        return str(f.read())	
+       
+    # def test_03_raviTiga1184040(self):
+    #     from Chapter02.raviTiga1184040 import raviTiga1184040, raviMenulis 
+    #     threadwrite = raviMenulis ("Thread Pro ",1 , 'value')
+    #     threadutama = raviTiga1184040("Thread Utama ", 2,2,5, 'value')
+    #     threadwrite.start()
+    #     threadutama.start()
+    #     threadwrite.join()
+    #     threadutama.join()
+    #     respon=self.readfile('./Chapter02/value.pdf')
+    #     self.assertNotRegex(respon, "Nomor :  12345678910")
+
+    # def test_03_parhanTiga1184042(self):
+    #     from Chapter02.parhanTiga1184042 import parhanTiga1184042,parhanEventDeleteFile  
+    #     threadutama = parhanTiga1184042("Thread Utama ", 2,5,5,'parhan')
+    #     threaddelete= parhanEventDeleteFile("Thread Delete File ", 1,'parhan')
+    #     threaddelete.start()
+    #     threadutama.start()
+    #     threaddelete.join()
+    #     threadutama.join()
+    #     respon=self.readfile('./Chapter02/parhan.txt')
+    #     self.assertNotRegex(respon, "kosong")
+
+    # def test_06_Ferdy_1184112(self):
+    #     from Chapter02.FerdyEnam1184112 import main
+    #     response =  main()
+    #     self.assertEqual(response, True)
+
+    # def test_06_zanwar_1184050(self):
+    #     from Chapter02.ZanwarEnam1184050 import main
+    #     response =  main()
+    #     self.assertEqual(response, True)
+    
+    #def test_06_alif_1184068(self):
+    #    from Chapter02.AlifEnam1184068 import main
+    #    response =  main()
+    #    self.assertEqual(response, True)
+    
+    def test_06_parhan_1184042(self):
+        from Chapter02.ParhanEnam1184042 import main
+        response =  main()
+        self.assertEqual(response, True)
+>>>>>>> 05681a40c1f1600886af7de701d3a93641396e74

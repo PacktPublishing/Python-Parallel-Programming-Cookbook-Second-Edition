@@ -84,6 +84,3 @@ class zanwarTiga1184050 (threading.Thread):
        f.write(str(isi))
        f.close()
        
-       
-       
-
