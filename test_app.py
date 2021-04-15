@@ -212,17 +212,17 @@ class TestApp(unittest.TestCase):
         #self.assertNotRegex(respon, "Kosong")
 #>>>>>>> 3aa81716bb58a3e7685425efe1259762e524b6aa
 
-def test_03_josuaTiga1184091(self):
-        from Chapter02.josuansefTiga1184091 import josua1184091_Catcher,josua1184091Write_Trier
-        threadwrite = josua1184091Write_Trier("Thread write File ", 1,'josua')
-        threadutama = josua1184091_Catcher("Thread Utama ", 2,2,5,'josua')
+#def test_03_josuaTiga1184091(self):
+ #       from Chapter02.josuansefTiga1184091 import josua1184091_Catcher,josua1184091Write_Trier
+  #      threadwrite = josua1184091Write_Trier("Thread write File ", 1,'josua')
+   #     threadutama = josua1184091_Catcher("Thread Utama ", 2,2,5,'josua')
         # threadutama.start()
-        threadwrite.start()
-        threadutama.start()
-        threadwrite.join()
-        threadutama.join()
-        respon=self.readfile('./Chapter02/josua1184091.txt')
-        self.assertRegex(respon, "Nomor : 18092001")
+    #    threadwrite.start()
+     #   threadutama.start()
+      #  threadwrite.join()
+       # threadutama.join()
+        #respon=self.readfile('./Chapter02/josua1184091.txt')
+        #self.assertRegex(respon, "Nomor : 18092001")
         # self.setUp()
 =======
 
@@ -326,8 +326,13 @@ def test_03_josuaTiga1184091(self):
     #    response =  main()
     #    self.assertEqual(response, True)
     
-    def test_06_parhan_1184042(self):
-        from Chapter02.ParhanEnam1184042 import main
+    #def test_06_parhan_1184042(self):
+     #   from Chapter02.ParhanEnam1184042 import main
+      #  response =  main()
+       # self.assertEqual(response, True)
+        
+    def test_06_josuansef_1184091(self):
+        from Chapter02.JosuansefEnam_1184091 import main
         response =  main()
         self.assertEqual(response, True)
->>>>>>> 05681a40c1f1600886af7de701d3a93641396e74
+
