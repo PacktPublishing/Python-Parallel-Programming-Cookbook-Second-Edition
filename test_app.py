@@ -1,3 +1,4 @@
+  
 import unittest
 
 
@@ -61,32 +62,6 @@ class TestApp(unittest.TestCase):
     #    response = main()
      #   self.assertEqual(response, True)
 
-
-    # def test_02_alif_1184068(self):
-    #     from Chapter02.Alif1184068 import main	
-    #     response = 	main()
-    #     self.assertEqual(response, True)
-
-    # def test_02_iradwita_1184024(self):
-    #     from Chapter02.IraDwita1184024 import main	
-    #     response = 	main()
-    #     self.assertEqual(response, True)
-        
-    # def test_02_bahar_1184002(self):
-    #     from Chapter02.baharandili1184002 import main  
-    #     response =  main()
-    #     self.assertEqual(response, True)
-
-    # def test_02_hanif_1184058(self):
-    #     from Chapter02.Hanif1184058 import main    
-    #     response =  main()
-    #     self.assertEqual(response, True)
-        
-    # def test_02_parhan_1184042(self):
-    #     from Chapter02.Parhan1184042 import main    
-    #     response =  main()
-    #     self.assertEqual(response, True)
-
     #def test_02_alif_1184068(self):
     #    from Chapter02.Alif1184068 import main	
     #    response = 	main()
@@ -106,7 +81,6 @@ class TestApp(unittest.TestCase):
     #    from Chapter02.Hanif1184058 import main    
     #    response =  main()
     #    self.assertEqual(response, True)
-
         
     #def test_02_parhan_1184042(self):
     #    from Chapter02.Parhan1184042 import main    
@@ -239,17 +213,25 @@ class TestApp(unittest.TestCase):
     #     threadutama.start()
     #     threaddelete.join()
     #     threadutama.join()
+    #     respon=self.readfile('./Chapter02/parhan.txt')
+    #     self.assertNotRegex(respon, "kosong")
 
-    def test_03_IrfanHernadezTiga1184014(self):
-        from Chapter02.IrfanHernandezTiga1184014 import NandezEvent,NandezEvent1184014
-        threadrewrite=  NandezEvent(" Thread Rewrite File ", 1,'miramas')
-        threadutama = NandezEvent1184014("Thread Utama", 2,'miramas')
-        threadrewrite.start()
-        threadutama.start()
-        threadrewrite.join()
-        threadutama.join()
-        respon=self.readfile('./Chapter02/miramas.txt')
-        self.assertNotRegex(respon, "marimas")
+    # def test_06_Ferdy_1184112(self):
+    #     from Chapter02.FerdyEnam1184112 import main
+    #     response =  main()
+    #     self.assertEqual(response, True)
 
-
-
+    # def test_06_zanwar_1184050(self):
+    #     from Chapter02.ZanwarEnam1184050 import main
+    #     response =  main()
+    #     self.assertEqual(response, True)
+    
+    #def test_06_alif_1184068(self):
+    #    from Chapter02.AlifEnam1184068 import main
+    #    response =  main()
+    #    self.assertEqual(response, True)
+    
+    def test_06_parhan_1184042(self):
+        from Chapter02.ParhanEnam1184042 import main
+        response =  main()
+        self.assertEqual(response, True)
