@@ -250,6 +250,7 @@ class TestApp(unittest.TestCase):
     #    response =  main()
     #    self.assertEqual(response, True)
     
+<<<<<<< HEAD
     def test_06_parhan_1184042(self):
         from Chapter02.ParhanEnam1184042 import main
         response =  main()
@@ -259,6 +260,19 @@ class TestApp(unittest.TestCase):
         from Chapter02.VickyEnam1184037 import main
         response = main()
         self.assertEqual(response, True)
+=======
+#<<<<<<< HEAD
+   # def test_06_parhan_1184042(self):
+        #from Chapter02.ParhanEnam1184042 import main
+        #response =  main()
+        #self.assertEqual(response, True)
+
+    #def test_06_ira_1184024(self):
+        #from Chapter02.IraEnam1184024 import main
+        #response =  main()
+        #self.assertEqual(response, True)
+
+>>>>>>> 09bf0a2a99f37d5012fc10a65857d5ee400f6400
     #def test_06_parhan_1184042(self):
     #    from Chapter02.ParhanEnam1184042 import main
     #    response =  main()
@@ -269,6 +283,7 @@ class TestApp(unittest.TestCase):
     #     response =  main()
     #     self.assertEqual(response, True)
 
+<<<<<<< HEAD
     def test_06_WahyuKurniaSari_1184001(self):
         from Chapter02.WahyuKurniaSariEnam1184001 import main
         result=main()
@@ -278,3 +293,14 @@ class TestApp(unittest.TestCase):
         from Chapter02.VickyEnam1184037 import main
         result=main()
         self.assertEqual(result, True)
+=======
+    #def test_06_WahyuKurniaSari_1184001(self):
+        #from Chapter02.WahyuKurniaSariEnam1184001 import main
+        #result=main()
+        #self.assertEqual(result, True)
+
+    def test_06_ira_1184024(self):
+        from Chapter02.IraEnam1184024 import main
+        response =  main()
+        self.assertEqual(response, True)
+>>>>>>> 09bf0a2a99f37d5012fc10a65857d5ee400f6400
