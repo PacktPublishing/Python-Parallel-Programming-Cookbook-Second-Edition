@@ -243,4 +243,8 @@ class TestApp(unittest.TestCase):
     def test_06_WahyuKurniaSari_1184001(self):
         from Chapter02.WahyuKurniaSariEnam1184001 import main
         result=main()
+<<<<<<< HEAD
         self.assertEqual(result, True)
+=======
+        self.assertEqual(result, True)
+>>>>>>> d44e0b07775ddf642cd4fa0af63714f34d54f927
