@@ -1,0 +1,8 @@
+minuman : 
+0. Margarita
+1. Blue Margarita
+2. Tommy's Margarita
+3. Whitecap Margarita
+4. Strawberry Margarita
+5. Smashed Watermelon Margarita
+diatas adalah minuman yang tersedia
