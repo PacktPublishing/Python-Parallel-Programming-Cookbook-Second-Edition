@@ -277,11 +277,6 @@ class TestApp(unittest.TestCase):
     #     response =  main()
     #     self.assertEqual(response, True)
 
-     def test_06_bahar_1184002(self):
-        from Chapter02.baharenam1184002 import main
-        response =  main()
-        self.assertEqual(response, True)
-
 
     #    from Chapter02.WahyuKurniaSariEnam1184001 import main
     #    result=main()
@@ -297,3 +292,7 @@ class TestApp(unittest.TestCase):
     #     result=main()
     #     self.assertEqual(result, True)
 
+    def test_06_bahar_1184002(self):
+        from Chapter02.baharenam1184002 import main
+        response =  main()
+        self.assertEqual(response, True)
