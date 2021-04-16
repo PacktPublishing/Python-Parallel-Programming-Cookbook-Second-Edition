@@ -29,17 +29,15 @@ def createfile(isi):
     print("Isi Dari File ini : \n "+a.read())
     a.close()
     b = open(filename+".txt", "a")
-    b.write("\ndiatas adalah minuman yang tersedia")
+    b.write("diatas adalah minuman yang tersedia")
+    print("Tambah Isi Dari File ini : \n "+b.read())
     b.close()
-    c = open(filename+".txt", "r")
-    print("Perubahan Isi Dari File ini : \n "+c.read())
-    c.close()
 
 def start():
     api()
     sleep(4)
     brr.wait()
-    print('API and readfile reached the barrier at: %s \n' % (ctime()))
+    print('api dan readfile freached the barrier at: %s \n' % (ctime()))
 
 
 def main():
