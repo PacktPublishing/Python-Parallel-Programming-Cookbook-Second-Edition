@@ -61,32 +61,6 @@ class TestApp(unittest.TestCase):
     #    response = main()
      #   self.assertEqual(response, True)
 
-    #def test_02_josua_1184091(self):
-        #from Chapter02.josua_1184091 import main    
-       # response =  main()
-        #self.assertEqual(response, True)
-
-   # def test_02_rolly_113040087(self):
-       # from Chapter02.Rolly113040087 import main	
-       # response = 	main()
-      #  self.assertEqual(response, True)
-        
-    #def readfile(self,namafile):
-      #  f = open(namafile, "r")
-      #  return int(f.read())	
-       
-   # def test_03_rollyDua113040087(self):
-      #  from Chapter02.rollyDua113040087 import rollyDua113040087,rollySemaphoreDeleteFile
-       # threaddelete= rollySemaphoreDeleteFile("Thread Delete File ", 1,'anu')
-       # threadutama = rollyDua113040087("Thread Utama ", 2,5,5,'anu')
-        #threaddelete.start()
-        #threadutama.start()
-        #threaddelete.join()
-        #threadutama.join()
-        #respon=self.readfile('./Chapter02/anu.croot')
-        #self.assertGreaterEqual(respon, 0)
-        
-
     #def test_02_alif_1184068(self):
     #    from Chapter02.Alif1184068 import main	
     #    response = 	main()
@@ -121,28 +95,7 @@ class TestApp(unittest.TestCase):
     #     f = open(filename, "r")
     #     return str(f.read())	
 
-
-    #def test_03_zanwarDua1184050(self):
-        #from Chapter02.ZanwarDua1184050 import zanwarDua1184050,zanwarRewrite
-        #threadrewrite= zanwarRewrite("Thread Rewrite File ", 1,'nilai')
-        #threadutama = zanwarDua1184050("Thread Utama ", 2,2,5,'nilai')
-        #threadrewrite.start()
-        #threadutama.start()
-        #threadrewrite.join()
-       # threadutama.join()
-        #respon=self.readfile('./Chapter02/nilai.txt')
-        #self.assertGreaterEqual(respon, 0)
-    
-    #def test_03_WahyuKurniaSariDua1184001(self):
-        #from Chapter02.WahyuKurniasariDua1184001 import WahyuKurniaSariSemaphoreDeleteFile,  WahyuKurniaSariDua1184001
-        #delete = WahyuKurniaSariSemaphoreDeleteFile("Thread delete", 1,"pikachu")
-        #main =  WahyuKurniaSariDua1184001("Thread utama", 2,"pikachu", "pikachu") 
-        #delete.start()
-        #main.start()
-        #delete.join()
-        #main.join()
-       # self.assertGreaterEqual(main.getFileContent(),0 )
-        
+       
     # def test_03_zanwarTiga1184050(self):
     #     from Chapter02.ZanwarTiga1184050 import zanwarTiga1184050, zanwarRewrite
     #     threadrewrite= zanwarRewrite("Thread Rewrite File ",1 , 'nilai')
@@ -175,48 +128,6 @@ class TestApp(unittest.TestCase):
     #     respon=self.readfile('./Chapter02/alip.txt')
     #     self.assertNotRegex(respon, "kosong")
 
-    #def test_03_FerdyTiga1184112(self):
-     #   from Chapter02.FerdyTiga1184112 import FerdyGITiga1184112,FerdyEventGI
-      #  threadrewrite= FerdyEventGI("Thread Lain ", 1,'minuman')
-       # threadutama = FerdyGITiga1184112("Thread inti ", 2,'minuman')
-        #threadrewrite.start()
-#>>>>>>> 3aa81716bb58a3e7685425efe1259762e524b6aa
- #       threadutama.start()
-  #      threadwrite.join()
-   #     threadutama.join()
-#<<<<<<< HEAD
- #       respon=self.readfile('./Chapter02/josua1184091.txt')
-  #      self.assertRegex(respon, "Nomor : 18092001")
-        # self.setUp()
-
-
-#=======
- #       respon=self.readfile('./Chapter02/minuman.txt')
-  #      self.assertNotRegex(respon, "Gak Boleh Kosong")
-	
-   # def test_03_hanifTiga1184058(self):
-    #    from Chapter02.HanifTiga1184058 import hanifTiga1184058, hanifRename
-     #  threadutama = hanifTiga1184058("Thread utama ", 2, 1, 'nilai')
-       # threadrename.start()
-        #threadutama.start()
-        #threadrename.join()
-        #threadutama.join()
-        #respon=self.readfile('./nilai.txt')
-        #self.assertNotRegex(respon, "Kosong")
-#>>>>>>> 3aa81716bb58a3e7685425efe1259762e524b6aa
-
-#def test_03_josuaTiga1184091(self):
- #       from Chapter02.josuansefTiga1184091 import josua1184091_Catcher,josua1184091Write_Trier
-  #      threadwrite = josua1184091Write_Trier("Thread write File ", 1,'josua')
-   #     threadutama = josua1184091_Catcher("Thread Utama ", 2,2,5,'josua')
-        # threadutama.start()
-    #    threadwrite.start()
-     #   threadutama.start()
-      #  threadwrite.join()
-       # threadutama.join()
-        #respon=self.readfile('./Chapter02/josua1184091.txt')
-        #self.assertRegex(respon, "Nomor : 18092001")
-        # self.setUp()
 
 
     # def test_03_FerdyTiga1184112(self):
@@ -331,11 +242,6 @@ class TestApp(unittest.TestCase):
         #self.assertEqual(response, True)
 
     #def test_06_parhan_1184042(self):
-
-     #   from Chapter02.ParhanEnam1184042 import main
-      #  response =  main()
-       # self.assertEqual(response, True)  
-
     #    from Chapter02.ParhanEnam1184042 import main
     #    response =  main()
     #    self.assertEqual(response, True)
@@ -347,20 +253,21 @@ class TestApp(unittest.TestCase):
 
     #def test_06_WahyuKurniaSari_1184001(self):
 
-     #   from Chapter02.WahyuKurniaSariEnam1184001 import main
+    #    from Chapter02.WahyuKurniaSariEnam1184001 import main
+    #    result=main()
+    #    self.assertEqual(result, True)
+
+    #def test_06_ira_1184024(self):
+    #    from Chapter02.IraEnam1184024 import main
+    #    response =  main()
+    #    self.assertEqual(response, True)
+
+    #def test_06_rizaluardi_1184102(self):
+     #   from Chapter02.RizaluardiEnam1184102 import main
       #  result=main()
        # self.assertEqual(result, True)
-
-        #from Chapter02.WahyuKurniaSariEnam1184001 import main
-        #result=main()
-        #self.assertEqual(result, True)
-
-   # def test_06_ira_1184024(self):
-      #  from Chapter02.IraEnam1184024 import main
-     #   response =  main()
-#>>>>>>> 09bf0a2a99f37d5012fc10a65857d5ee400f6400
-      #  self.assertEqual(response, True)
-      
+        
     def test_06_josuansef_1184091(self):
         from Chapter02.JosuansefEnam_1184091 import main
-        response = main()
+        result=main()
+        self.assertEqual(result, True)
