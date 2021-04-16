@@ -235,6 +235,11 @@ class TestApp(unittest.TestCase):
     #  response =  main()
     # self.assertEqual(response, True)
     
+    #def test_06_WahyuKurniaSari_1184001(self):
+    #    from Chapter02.WahyuKurniaSariEnam1184001 import main
+    #    result=main()
+    #    self.assertEqual(result, True)
+    
     def test_06_anisa_1184016(self):
         from Chapter02.AnisaRosalinaEnam1184016 import main
         response =  main()
