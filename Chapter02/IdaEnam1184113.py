@@ -6,7 +6,7 @@ jumlah = 3
 shield = Barrier(jumlah)
 runners = []
 filename = "luffy.txt"
-
+#api ida
 def api():
     url = "https://api.jikan.moe/v3/search/anime?q=One%20Piece"
     response = requests.get(url)
