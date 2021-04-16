@@ -267,7 +267,7 @@ class TestApp(unittest.TestCase):
 
    
     #def test_06_WahyuKurniaSari_1184001(self):
-<<<<<<< HEAD
+
         #from Chapter02.WahyuKurniaSariEnam1184001 import main
         #result=main()
         #self.assertEqual(result, True)
@@ -281,7 +281,7 @@ class TestApp(unittest.TestCase):
         from Chapter02.baharenam1184002 import main
         response =  main()
         self.assertEqual(response, True)
-=======
+
 
     #    from Chapter02.WahyuKurniaSariEnam1184001 import main
     #    result=main()
@@ -292,8 +292,8 @@ class TestApp(unittest.TestCase):
     #    response =  main()
     #    self.assertEqual(response, True)
 
-    def test_06_rizaluardi_1184102(self):
-        from Chapter02.RizaluardiEnam1184102 import main
-        result=main()
-        self.assertEqual(result, True)
->>>>>>> a25ed61c5ea41968e9719e1dc0ad4174cb91c1b0
+    # def test_06_rizaluardi_1184102(self):
+    #     from Chapter02.RizaluardiEnam1184102 import main
+    #     result=main()
+    #     self.assertEqual(result, True)
+
