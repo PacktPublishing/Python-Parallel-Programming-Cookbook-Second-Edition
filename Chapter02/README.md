@@ -44,7 +44,7 @@
 
 # Tugas pertemuan 7
 1. Buatlah fungsi thread dengan queue dalam file NamaTujuhNPM.py 
-2. Minimal ada dua fungsi(dianjurkan lebih banyak), yaitu threadnya dan fungsi main nya
+2. Minimal ada dua fungsi atau kelas(dianjurkan lebih banyak), yaitu threadnya dan fungsi main nya
 3. Fungsi tersebut mengimplementasikan web service atau manajemen file atau variabel global
 4. Tidak boleh meniru logika teman sekelas, harus orisinil logika harus berbeda dengan temannya
 5. Panggil pada test_app fungsi main dari file tersebut. wajib harus ada assert
