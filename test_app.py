@@ -94,13 +94,13 @@ class TestApp(unittest.TestCase):
 
     def test_03_FerdyEvent1184112(self):
        from Chapter02.FerdyTujuh1184112 import FerdyQueue,Ferdy
-       threadrewrite= FerdyQueue("Thread Lain ",'queue')
-       threadutama = Ferdy("Thread inti",'queue')
-       threadrewrite.start()
-       threadutama.start()
-       threadrewrite.join()
-       threadutama.join()
-       respon=self.readfile('./Chapter02/queue.txt')
+       threadjuga= FerdyQueue("Thread Lain ",'queue')
+       threadaja = Ferdy("Thread inti",'queue')
+       threadjuga.start()
+       threadaja.start()
+       threadjuga.join()
+       threadaja.join()
+       respon=self.readfile('./Chapter02/queue')
        self.assertNotRegex(respon, "Gak Boleh Kosong")
     
     
