@@ -50,7 +50,7 @@ class zanwarRewrite (threading.Thread):
        fr.close()
 
        
-class zanwarTiga1184050 (threading.Thread):
+class zanwarTujuh1184050 (threading.Thread):
    def __init__(self, name, thread_number, a ,filename):
        threading.Thread.__init__(self)
        self.threadLock = threading.Lock()

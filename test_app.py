@@ -42,10 +42,10 @@ class TestApp(unittest.TestCase):
         f.close()	
 
        
-    def test_03_zanwarTiga1184050(self):
-        from Chapter02.ZanwarTujuh1184050 import zanwarTiga1184050, zanwarRewrite
+    def test_07_zanwarTujuh1184050(self):
+        from Chapter02.ZanwarTujuh1184050 import zanwarTujuh1184050, zanwarRewrite
         thread1 = zanwarRewrite("Thread Rewrite File ",1 , 'nilai')
-        thread2 = zanwarTiga1184050("Thread Utama ", 2, 10, 'nilai')
+        thread2 = zanwarTujuh1184050("Thread Utama ", 2, 5, 'nilai')
         thread2.start()
         thread1.start()
         thread2.join()
