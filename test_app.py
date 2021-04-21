@@ -97,31 +97,31 @@ class TestApp(unittest.TestCase):
 #       respon=self.readfile('./Chapter02/queue')
 #       self.assertNotRegex(respon, "Gak Boleh Kosong")
 
-    # def test_07_HernandezTujuh1184014(self):
-        # from Chapter02.IrfanHernandezTujuh1184014 import IrfanPut
-        # thread1 = IrfanPut("Thread Put", 1, "miramas")
-        # thread1.start()
-        # thread1.join()
-        # respon=self.readfile('./Chapter02/miramas.txt')
-        # self.assertNotRegex(respon, "Kosong")
+#    def test_07_HernandezTujuh1184014(self):
+#        from Chapter02.IrfanHernandezTujuh1184014 import IrfanPut
+#        thread1 = IrfanPut("Thread Put", 1, "miramas")
+#        thread1.start()
+#        thread1.join()
+#        respon=self.readfile('./Chapter02/miramas.txt')
+#        self.assertNotRegex(respon, "Kosong")
+#    
+#    
+#    def test_07_alifTujuh1184068(self):
+#        from Chapter02.AlifTujuh1184068 import alifTujuh1184068,alifHandlingFile  
+#        threadutama = alifTujuh1184068("Thread Utama ", 2,5,5,'alip')
+#        threadhandling= alifHandlingFile("Thread handling File ", 1,'alip')
+#        threadhandling.start()
+#        threadutama.start()
+#        threadhandling.join()
+#        threadutama.join()
+#        respon=self.readfile('./Chapter02/alip.txt')
+#        self.assertNotRegex(respon, "kosong")
+#    
     
-    
-    # def test_07_alifTujuh1184068(self):
-        # from Chapter02.AlifTujuh1184068 import alifTujuh1184068,alifHandlingFile  
-        # threadutama = alifTujuh1184068("Thread Utama ", 2,5,5,'alip')
-        # threadhandling= alifHandlingFile("Thread handling File ", 1,'alip')
-        # threadhandling.start()
-        # threadutama.start()
-        # threadhandling.join()
-        # threadutama.join()
-        # respon=self.readfile('./Chapter02/alip.txt')
-        # self.assertNotRegex(respon, "kosong")
-		
-	def test_07_AnisaTujuh1184016(self):
+    def test_07_AnisaTujuh1184016(self):
         from Chapter02.AnisaRosalinaTujuh1184016 import Anisa
         thread1 = Anisa("Thread Put", 1, "Cocktile")
         thread1.start()
         thread1.join()
         respon=self.readfile('./Chapter02/Cocktile.txt')
         self.assertNotRegex(respon, "Kosong")
-    
