@@ -337,14 +337,24 @@ class TestApp(unittest.TestCase):
 #        respon=self.readfile('./Chapter02/ravi.txt')
 #        self.assertNotRegex(respon, "kosong")
     
-    def test_07_OkkyTujuh1184087(self):
-        from Chapter02.OkkyTujuh1184087 import Person,okky 
-        t1 = Person("Thread Utama ", 1,'okky.txt')
-        t2 = okky("Thread kedua File ", 2,5,'okky.txt')
-        t2.start()
-        t1.start()
-        t2.join()
-        t1.join()
-        respon=self.readfile('./Chapter02/okky.txt')
-        self.assertNotRegex(respon, "kosong")
+    # def test_07_OkkyTujuh1184087(self):
+    #     from Chapter02.OkkyTujuh1184087 import Person,okky 
+    #     t1 = Person("Thread Utama ", 1,'okky.txt')
+    #     t2 = okky("Thread kedua File ", 2,5,'okky.txt')
+    #     t2.start()
+    #     t1.start()
+    #     t2.join()
+    #     t1.join()
+    #     respon=self.readfile('./Chapter02/okky.txt')
+    #     self.assertNotRegex(respon, "kosong")
 
+    def test_07_idaTujuh1184113(self):
+        from Chapter02.IdaTujuh1184113 import idaTujuh1184113,Director
+        threadutama = idaTujuh1184113("Thread Utama ", 2,5,5,'ida')
+        threaddirector= Director("Thread Director ", 1,'ida')
+        threaddirector.start()
+        threadutama.start()
+        threaddirector.join()
+        threadutama.join()
+        respon=self.readfile('./Chapter02/ida.txt')
+        self.assertNotRegex(respon, "kosong")
