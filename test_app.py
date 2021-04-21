@@ -337,6 +337,7 @@ class TestApp(unittest.TestCase):
 #        respon=self.readfile('./Chapter02/ravi.txt')
 #        self.assertNotRegex(respon, "kosong")
     
+#<<<<<<< HEAD
     # def test_07_OkkyTujuh1184087(self):
     #     from Chapter02.OkkyTujuh1184087 import Person,okky 
     #     t1 = Person("Thread Utama ", 1,'okky.txt')
@@ -359,15 +360,47 @@ class TestApp(unittest.TestCase):
     #     respon=self.readfile('./Chapter02/ravi.txt')
     #     self.assertNotRegex(respon, "kosong")
 
+# =======
+#    def test_07_OkkyTujuh1184087(self):
+#        from Chapter02.OkkyTujuh1184087 import Person,okky 
+#        t1 = Person("Thread Utama ", 1,'okky.txt')
+#        t2 = okky("Thread kedua File ", 2,5,'okky.txt')
+#        t2.start()
+#        t1.start()
+#        t2.join()
+#        t1.join()
+#        respon=self.readfile('./Chapter02/okky.txt')
+#        self.assertNotRegex(respon, "kosong")
 
-    def test_07_IraTujuh1184024(self):
-        from Chapter02.IraTujuh1184024 import iraRemoveFile,iraTujuh1184024
-        threadutama = iraTujuh1184024("Thread Utama ", 2,5,5,'ira')
-        threadremove= iraRemoveFile("Thread Remove File ", 1,'ira')
-        threadremove.start()
-        threadutama.start()
-        threadremove.join()
-        threadutama.join()
-        respon=self.readfile('./Chapter02/ira.txt')
-        self.assertNotRegex(respon, "kosong")
+# >>>>>>> 84d9529186324afd0455a455998e7a21370cbe71
 
+# #    def test_07_raviTujuh1184040(self):
+# #        from Chapter02.raviTujuh1184040 import raviTujuh1184040,raviMenulis 
+# #        threadutama = raviTujuh1184040("Thread Utama ", 2,5,5,'ravi')
+# #        threadravi2= raviMenulis("Thread raviMenulis File ", 1,'ravi')
+# #        threadravi2.start()
+# #        threadutama.start()
+# #        threadravi2.join()
+# #        threadutama.join()
+# #        respon=self.readfile('./Chapter02/ravi.txt')
+# #        self.assertNotRegex(respon, "kosong")
+    
+#     def test_07_AnisaTujuh1184016(self):
+#         from Chapter02.AnisaRosalinaTujuh1184016 import Anisa
+#         thread1 = Anisa("Thread Put", 1, "Cocktile")
+#         thread1.start()
+#         thread1.join()
+#         respon=self.readfile('./Chapter02/Cocktile.txt')
+#         self.assertNotRegex(respon, "Kosong")
+
+
+      def test_07_IraTujuh1184024(self):
+          from Chapter02.IraTujuh1184024 import iraRemoveFile,iraTujuh1184024
+          threadutama = iraTujuh1184024("Thread Utama ", 2,5,5,'ira')
+          threadremove= iraRemoveFile("Thread Remove File ", 1,'ira')
+          threadremove.start()
+          threadutama.start()
+          threadremove.join()
+          threadutama.join()
+          respon=self.readfile('./Chapter02/ira.txt')
+          self.assertNotRegex(respon, "kosong")
