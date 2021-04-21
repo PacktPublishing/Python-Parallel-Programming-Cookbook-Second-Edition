@@ -76,13 +76,200 @@ class TestApp(unittest.TestCase):
     #     respon=self.readfile('./Chapter02/minuman.txt')
     #     self.assertNotRegex(respon, "Gak Boleh Kosong")
 
+	
+    # def test_03_hanifTiga1184058(self):
+    #     from Chapter02.HanifTiga1184058 import hanifTiga1184058, hanifRename
+    #     threadrename= hanifRename("Thread rename file ",1 , 'nilai')
+    #     threadutama = hanifTiga1184058("Thread utama ", 2, 1, 'nilai')
+    #     threadrename.start()
+    #     threadutama.start()
+    #     threadrename.join()
+    #     threadutama.join()
+    #     respon=self.readfile('./nilai.txt')
+    #     self.assertNotRegex(respon, "Kosong")
+    # def readfile(self,nfile):
+    #     f = open(nfile, "r+")
+    #     return str(f.read())	
+       
+       
+    # def test_03_raviTiga1184040(self):
+    #     from Chapter02.raviTiga1184040 import raviTiga1184040, raviMenulis 
+    #     threadwrite = raviMenulis ("Thread Pro ",1 , 'value')
+    #     threadutama = raviTiga1184040("Thread Utama ", 2,2,5, 'value')
+    #     threadwrite.start()
+
+    # def test_03_FerdyTiga1184112(self):
+    #     from Chapter02.FerdyTiga1184112 import FerdyGITiga1184112,FerdyEventGI
+    #     threadrewrite= FerdyEventGI("Thread Lain ", 1,'minuman')
+    #     threadutama = FerdyGITiga1184112("Thread inti ", 2,'minuman')
+    #     threadrewrite.start()
+
+    #     threadutama.start()
+    #     threadwrite.join()
+    #     threadutama.join()
+
+    #     respon=self.readfile('./Chapter02/value.pdf')
+    #     self.assertNotRegex(respon, "Nomor :  12345678910")
+
+    #     respon=self.readfile('./Chapter02/minuman.txt')
+    #     self.assertNotRegex(respon, "Gak Boleh Kosong")
+	
+    # def test_03_hanifTiga1184058(self):
+    #     from Chapter02.HanifTiga1184058 import hanifTiga1184058, hanifRename
+    #     threadrename= hanifRename("Thread rename file ",1 , 'nilai')
+    #     threadutama = hanifTiga1184058("Thread utama ", 2, 1, 'nilai')
+    #     threadrename.start()
+    #     threadutama.start()
+    #     threadrename.join()
+    #     threadutama.join()
+    #     respon=self.readfile('./nilai.txt')
+    #     self.assertNotRegex(respon, "Kosong")
+    #
+    def readfile(self,nfile):
+        f = open(nfile, "r+")
+        return str(f.read())	
+       
+    # def test_03_raviTiga1184040(self):
+    #     from Chapter02.raviTiga1184040 import raviTiga1184040, raviMenulis 
+    #     threadwrite = raviMenulis ("Thread Pro ",1 , 'value')
+    #     threadutama = raviTiga1184040("Thread Utama ", 2,2,5, 'value')
+    #     threadwrite.start()
+    #     threadutama.start()
+    #     threadwrite.join()
+    #     threadutama.join()
+    #     respon=self.readfile('./Chapter02/value.pdf')
+    #     self.assertNotRegex(respon, "Nomor :  12345678910")
+
+
+#    def test_03_parhanTiga1184042(self):
+#        from Chapter02.parhanTiga1184042 import parhanTiga1184042,parhanEventDeleteFile  
+#        threadutama = parhanTiga1184042("Thread Utama ", 2,5,5,'parhan')
+#        threaddelete= parhanEventDeleteFile("Thread Delete File ", 1,'parhan')
+#        threaddelete.start()
+#        threadutama.start()
+#        threaddelete.join()
+#        threadutama.join()
+#        respon=self.readfile('./Chapter02/parhan.txt')
+#        self.assertNotRegex(respon, "kosong")
+#        
+#    def test_03_okkyTiga1184087(self):
+#        from chapter02.okkyTiga1184087 import okky1184087Write_Trier, okky1184087
+#        threadwrite = okky1184087Write_Trier ("Thread satu ",1 , 'okky1')
+#        threadutama = okky1184087("Thread dua ", 2,2, 'okky2')
+#        threadwrite.start()
+#        threadutama.start()
+#        threadwrite.join()
+#        threadutama.join()
+#        respon=self.readfile('./Chapter02/value.pdf')
+#        self.assertNotRegex(respon, "Nomor :  12345678910")
+
+    # def test_03_parhanTiga1184042(self):
+    #     from Chapter02.parhanTiga1184042 import parhanTiga1184042,parhanEventDeleteFile  
+    #     threadutama = parhanTiga1184042("Thread Utama ", 2,5,5,'parhan')
+    #     threaddelete= parhanEventDeleteFile("Thread Delete File ", 1,'parhan')
+    #     threaddelete.start()
+    #     threadutama.start()
+    #     threaddelete.join()
+    #     threadutama.join()
+    #     respon=self.readfile('./Chapter02/parhan.txt')
+    #     self.assertNotRegex(respon, "kosong")
+
+
     # def test_06_Ferdy_1184112(self):
     #     from Chapter02.FerdyEnam1184112 import main
     #     response =  main()
     #     self.assertEqual(response, True)
 
+
+    # def test_06_zanwar_1184050(self):
+    #     from Chapter02.ZanwarEnam1184050 import main
+    #     response =  main()
+    #     self.assertEqual(response, True)
+    
+    #def test_06_alif_1184068(self):
+    #    from Chapter02.AlifEnam1184068 import main
+    #    response =  main()
+    #    self.assertEqual(response, True)
+    
+
+
+    # def test_06_parhan_1184042(self):
+    #     from Chapter02.ParhanEnam1184042 import main
+    #     response =  main()
+    #     self.assertEqual(response, True)
+
+
+   # def test_06_parhan_1184042(self):
+        #from Chapter02.ParhanEnam1184042 import main
+        #response =  main()
+        #self.assertEqual(response, True)
+
+    #def test_06_ira_1184024(self):
+        #from Chapter02.IraEnam1184024 import main
+        #response =  main()
+        #self.assertEqual(response, True)
+
+
+    #def test_06_parhan_1184042(self):
+    #    from Chapter02.ParhanEnam1184042 import main
+    #    response =  main()
+    #    self.assertEqual(response, True)
+
+
+    # def test_06_hanif_1184058(self):
+    #     from Chapter02.HanifEnam1184058 import main
+    #     response =  main()
+    #     self.assertEqual(response, True)
+
+
+    #def test_06_WahyuKurniaSari_1184001(self):
+
+
+      # def test_06_WahyuKurniaSari_1184001(self):
+    #     from Chapter02.WahyuKurniaSariEnam1184001 import main
+    #     result=main()
+    #     self.assertEqual(result, True)
+
+   
+    #def test_06_WahyuKurniaSari_1184001(self):
+
+        #from Chapter02.WahyuKurniaSariEnam1184001 import main
+        #result=main()
+        #self.assertEqual(result, True)
+
+    # def test_06_ira_1184024(self):
+    #     from Chapter02.IraEnam1184024 import main
+    #     response =  main()
+    #     self.assertEqual(response, True)
+
+
+
+    #    from Chapter02.WahyuKurniaSariEnam1184001 import main
+    #    result=main()
+    #    self.assertEqual(result, True)
+
+    #def test_06_ira_1184024(self):
+    #    from Chapter02.IraEnam1184024 import main
+    #    response =  main()
+    #    self.assertEqual(response, True)
+
+
+    # def test_06_rizaluardi_1184102(self):
+    #     from Chapter02.RizaluardiEnam1184102 import main
+    #     result=main()
+    #     self.assertEqual(result, True)
+
+    #def test_06_rizaluardi_1184102(self):
+    #    from Chapter02.RizaluardiEnam1184102 import main
+    #    result=main()
+    #    self.assertEqual(result, True)
+
+
+    # def test_06_nandez_1184014(self):
+    #      from Chapter02.IrfanHernandezEnam1184014 import main
     # def test_06_josuansef_1184091(self):
     #      from Chapter02.JosuansefEnam_1184091 import main
+
     #      response =  main()
     #      self.assertEqual(response, True)
 
@@ -127,19 +314,40 @@ class TestApp(unittest.TestCase):
     #      thread1.join()
     #      respon=self.readfile('./Chapter02/pokemon.txt')
     #      self.assertNotRegex(respon, "Kosong")
-    
 
-    #def test_07_raviTujuh1184040(self):
-     #   from Chapter02.raviTujuh1184040 import raviTujuh1184040,raviMenulis 
-      #  threadutama = raviTujuh1184040("Thread Utama ", 2,5,5,'ravi')
-       # threadravi2= raviMenulis("Thread raviMenulis File ", 1,'ravi')
-       #threadravi2.start()
-        #threadutama.start()
-        #threadravi2.join()
-        #threadutama.join()
-        #respon=self.readfile('./Chapter02/ravi.txt')
-        #elf.assertNotRegex(respon, "kosong")
+    # def test_06_bahar_1184002(self):
+    #     from Chapter02.baharenam1184002 import main
+    #     response =  main()
+    #     self.assertEqual(response, True)
         
+    #def test_06_josuansef_1184091(self):
+    #     from Chapter02.JosuansefEnam_1184091 import main
+    #     response =  main()
+    #     self.assertEqual(response, True)
+
+
+#    def test_07_raviTujuh1184040(self):
+#        from Chapter02.raviTujuh1184040 import raviTujuh1184040,raviMenulis 
+#        threadutama = raviTujuh1184040("Thread Utama ", 2,5,5,'ravi')
+#        threadravi2= raviMenulis("Thread raviMenulis File ", 1,'ravi')
+#        threadravi2.start()
+#        threadutama.start()
+#        threadravi2.join()
+#        threadutama.join()
+#        respon=self.readfile('./Chapter02/ravi.txt')
+#        self.assertNotRegex(respon, "kosong")
+    
+#    def test_07_OkkyTujuh1184087(self):
+#        from Chapter02.OkkyTujuh1184087 import Person,okky 
+#       t1 = Person("Thread Utama ", 1,'okky.txt')
+#        t2 = okky("Thread kedua File ", 2,5,'okky.txt')
+#        t2.start()
+#        t1.start()
+#        t2.join()
+#        t1.join()
+#        respon=self.readfile('./Chapter02/okky.txt')
+#       self.assertNotRegex(respon, "kosong")
+
     def test_07_josuanseftujuh1184091(self):
         from Chapter02.JosuansefTujuh_1184091 import Josuansef1184091Tujuh_Producer,Josuansef1184091Tujuh_Consumer 
         threadjosuaproducer = Josuansef1184091Tujuh_Producer("Thread Utama ", 2,5,5,'josuansef')
@@ -150,3 +358,5 @@ class TestApp(unittest.TestCase):
         threadjosuaproducer.join()
         respon=self.readfile('./Chapter02/josuansef.txt')
         self.assertNotRegex(respon, "kosong")
+        
+    
