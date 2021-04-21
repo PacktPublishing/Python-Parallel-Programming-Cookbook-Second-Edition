@@ -86,21 +86,26 @@ class TestApp(unittest.TestCase):
     #      response =  main()
     #      self.assertEqual(response, True)
 
-    def readfile(self,filename):
-        f = open(filename, "r")
-        return str(f.read())
+#    def test_03_FerdyEvent1184112(self):
+#       from Chapter02.FerdyTujuh1184112 import FerdyQueue,Ferdy
+#       threadjuga= FerdyQueue("Thread Lain ",'queue')
+#       threadaja = Ferdy("Thread inti",'queue')
+#       threadjuga.start()
+#       threadaja.start()
+#       threadjuga.join()
+#       threadaja.join()
+#       respon=self.readfile('./Chapter02/queue')
+#       self.assertNotRegex(respon, "Gak Boleh Kosong")
 
+    def test_07_HernandezTujuh1184014(self):
+        from Chapter02.IrfanHernandezTujuh1184014 import IrfanPut
+        thread1 = IrfanPut("Thread Put", 1, "miramas")
+        thread1.start()
+        thread1.join()
+        respon=self.readfile('./Chapter02/miramas.txt')
+        self.assertNotRegex(respon, "Kosong")
+    
 
-
-    def test_03_FerdyEvent1184112(self):
-       from Chapter02.FerdyTujuh1184112 import FerdyQueue,Ferdy
-       threadjuga= FerdyQueue("Thread Lain ",'queue')
-       threadaja = Ferdy("Thread inti",'queue')
-       threadjuga.start()
-       threadaja.start()
-       threadjuga.join()
-       threadaja.join()
-       respon=self.readfile('./Chapter02/queue')
-       self.assertNotRegex(respon, "Gak Boleh Kosong")
+    
     
     
