@@ -116,7 +116,29 @@ class TestApp(unittest.TestCase):
 #        threadutama.join()
 #        respon=self.readfile('./Chapter02/alip.txt')
 #        self.assertNotRegex(respon, "kosong")
-#    
+    
+    # def test_07_hanifTujuh1184058(self):
+    #      from Chapter02.HanifTujuh1184058 import HanifTujuh1184058, HanifCopy
+    #      thread1 = HanifCopy("Thread Copy File ",1 , 'pokemon.txt')
+    #      thread2 = HanifTujuh1184058("Thread Utama ", 2, 5, 'pokemon.txt')
+    #      thread2.start()
+    #      thread1.start()
+    #      thread2.join()
+    #      thread1.join()
+    #      respon=self.readfile('./Chapter02/pokemon.txt')
+    #      self.assertNotRegex(respon, "Kosong")
+    
+
+#    def test_07_raviTujuh1184040(self):
+#        from Chapter02.raviTujuh1184040 import raviTujuh1184040,raviMenulis 
+#        threadutama = raviTujuh1184040("Thread Utama ", 2,5,5,'ravi')
+#        threadravi2= raviMenulis("Thread raviMenulis File ", 1,'ravi')
+#        threadravi2.start()
+#        threadutama.start()
+#        threadravi2.join()
+#        threadutama.join()
+#        respon=self.readfile('./Chapter02/ravi.txt')
+#        self.assertNotRegex(respon, "kosong")
     
     def test_07_AnisaTujuh1184016(self):
         from Chapter02.AnisaRosalinaTujuh1184016 import Anisa
