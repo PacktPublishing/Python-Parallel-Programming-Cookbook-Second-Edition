@@ -129,13 +129,25 @@ class TestApp(unittest.TestCase):
     #      self.assertNotRegex(respon, "Kosong")
     
 
-    def test_07_raviTujuh1184040(self):
-        from Chapter02.raviTujuh1184040 import raviTujuh1184040,raviMenulis 
-        threadutama = raviTujuh1184040("Thread Utama ", 2,5,5,'ravi')
-        threadravi2= raviMenulis("Thread raviMenulis File ", 1,'ravi')
-        threadravi2.start()
+    # def test_07_raviTujuh1184040(self):
+    #     from Chapter02.raviTujuh1184040 import raviTujuh1184040,raviMenulis 
+    #     threadutama = raviTujuh1184040("Thread Utama ", 2,5,5,'ravi')
+    #     threadravi2= raviMenulis("Thread raviMenulis File ", 1,'ravi')
+    #     threadravi2.start()
+    #     threadutama.start()
+    #     threadravi2.join()
+    #     threadutama.join()
+    #     respon=self.readfile('./Chapter02/ravi.txt')
+    #     self.assertNotRegex(respon, "kosong")
+
+
+    def test_07_IraTujuh1184024(self):
+        from Chapter02.IraTujuh1184024 import iraRemoveFile,iraTujuh1184024
+        threadutama = iraTujuh1184024("Thread Utama ", 2,5,5,'ira')
+        threadremove= iraRemoveFile("Thread Remove File ", 1,'ira')
+        threadremove.start()
         threadutama.start()
-        threadravi2.join()
+        threadremove.join()
         threadutama.join()
-        respon=self.readfile('./Chapter02/ravi.txt')
+        respon=self.readfile('./Chapter02/ira.txt')
         self.assertNotRegex(respon, "kosong")

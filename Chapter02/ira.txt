@@ -1,0 +1,1 @@
+[{'breeds': [], 'categories': [{'id': 1, 'name': 'hats'}], 'id': '37a', 'url': 'https://cdn2.thecatapi.com/images/37a.gif', 'width': 500, 'height': 375}]
