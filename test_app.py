@@ -42,16 +42,16 @@ class TestApp(unittest.TestCase):
         f.close()	
 
        
-    def test_07_zanwarTujuh1184050(self):
-        from Chapter02.ZanwarTujuh1184050 import zanwarTujuh1184050, zanwarRewrite
-        thread1 = zanwarRewrite("Thread Rewrite File ",1 , 'nilai')
-        thread2 = zanwarTujuh1184050("Thread Utama ", 2, 5, 'nilai')
-        thread2.start()
-        thread1.start()
-        thread2.join()
-        thread1.join()
-        respon=self.readfile('./Chapter02/nilai.txt')
-        self.assertNotRegex(respon, "Kosong")
+    # def test_07_zanwarTujuh1184050(self):
+    #     from Chapter02.ZanwarTujuh1184050 import zanwarTujuh1184050, zanwarRewrite
+    #     thread1 = zanwarRewrite("Thread Rewrite File ",1 , 'nilai')
+    #     thread2 = zanwarTujuh1184050("Thread Utama ", 2, 5, 'nilai')
+    #     thread2.start()
+    #     thread1.start()
+    #     thread2.join()
+    #     thread1.join()
+    #     respon=self.readfile('./Chapter02/nilai.txt')
+    #     self.assertNotRegex(respon, "Kosong")
     
 #    def test_03_WahyuKurniaSariDua1184001(self):
  #       from Chapter02.WahyuKurniasariDua1184001 import WahyuKurniaSariSemaphoreDeleteFile,  WahyuKurniaSariDua1184001
@@ -85,5 +85,22 @@ class TestApp(unittest.TestCase):
     #      from Chapter02.JosuansefEnam_1184091 import main
     #      response =  main()
     #      self.assertEqual(response, True)
+
+    def readfile(self,filename):
+        f = open(filename, "r")
+        return str(f.read())
+
+
+
+    def test_03_FerdyEvent1184112(self):
+       from Chapter02.FerdyTujuh1184112 import FerdyQueue,Ferdy
+       threadjuga= FerdyQueue("Thread Lain ",'queue')
+       threadaja = Ferdy("Thread inti",'queue')
+       threadjuga.start()
+       threadaja.start()
+       threadjuga.join()
+       threadaja.join()
+       respon=self.readfile('./Chapter02/queue')
+       self.assertNotRegex(respon, "Gak Boleh Kosong")
     
     
