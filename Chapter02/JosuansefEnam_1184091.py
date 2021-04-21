@@ -1,15 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-<<<<<<< HEAD
-Created on Fri Apr 16 11:21:11 2021
-
-@author: asus
-"""
-
-# -*- coding: utf-8 -*-
-"""
-=======
->>>>>>> 648734b0ad2623db5ac8aa2105e3b9d38d2252c4
 Created on Thu Apr 15 12:31:12 2021
 
 @author: Josuansef Pardede (1184091)
