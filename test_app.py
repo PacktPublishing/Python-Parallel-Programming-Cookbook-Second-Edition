@@ -92,15 +92,25 @@ class TestApp(unittest.TestCase):
 
 
 
-    def test_03_FerdyEvent1184112(self):
-       from Chapter02.FerdyTujuh1184112 import FerdyQueue,Ferdy
-       threadjuga= FerdyQueue("Thread Lain ",'queue')
-       threadaja = Ferdy("Thread inti",'queue')
-       threadjuga.start()
-       threadaja.start()
-       threadjuga.join()
-       threadaja.join()
-       respon=self.readfile('./Chapter02/queue')
-       self.assertNotRegex(respon, "Gak Boleh Kosong")
+    # def test_03_FerdyEvent1184112(self):
+    #    from Chapter02.FerdyTujuh1184112 import FerdyQueue,Ferdy
+    #    threadjuga= FerdyQueue("Thread Lain ",'queue')
+    #    threadaja = Ferdy("Thread inti",'queue')
+    #    threadjuga.start()
+    #    threadaja.start()
+    #    threadjuga.join()
+    #    threadaja.join()
+    #    respon=self.readfile('./Chapter02/queue')
+    #    self.assertNotRegex(respon, "Gak Boleh Kosong")
     
+    def test_07_alifTujuh1184068(self):
+        from Chapter02.AlifTujuh1184068 import alifTujuh1184068,alifHandlingFile  
+        threadutama = alifTujuh1184068("Thread Utama ", 2,5,5,'alip')
+        threadhandling= alifHandlingFile("Thread handling File ", 1,'alip')
+        threadhandling.start()
+        threadutama.start()
+        threadhandling.join()
+        threadutama.join()
+        respon=self.readfile('./Chapter02/alip.txt')
+        self.assertNotRegex(respon, "kosong")
     
