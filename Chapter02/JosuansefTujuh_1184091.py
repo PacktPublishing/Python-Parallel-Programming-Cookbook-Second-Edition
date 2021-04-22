@@ -37,7 +37,7 @@ class Josuansef1184091Tujuh_Consumer(Thread):
    
     def readfile(self):
        q=queue.get()
-       f = open(self.filenya, "r+")
+       f = open(self.filenya, "r")
        print("Cek konten isi file : "+f.read())
        print("Selesai membaca file, eksekusi queue task done \n")
        queue.task_done()
