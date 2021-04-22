@@ -465,6 +465,7 @@ class TestApp(unittest.TestCase):
 #        respon=self.readfile('./Chapter02/ravi.txt')
 #        self.assertNotRegex(respon, "kosong")
     
+<<<<<<< HEAD
     def test_07_AnisaTujuh1184016(self):
         from Chapter02.AnisaRosalinaTujuh1184016 import Anisa
         thread1 = Anisa("Thread Put", 1, "Cocktile")
@@ -473,3 +474,55 @@ class TestApp(unittest.TestCase):
         respon=self.readfile('./Chapter02/Cocktile.txt')
         self.assertNotRegex(respon, "Kosong")
 >>>>>>> 84d9529186324afd0455a455998e7a21370cbe71
+=======
+    # def test_07_AnisaTujuh1184016(self):
+    #     from Chapter02.AnisaRosalinaTujuh1184016 import Anisa
+    #     thread1 = Anisa("Thread Put", 1, "Cocktile")
+    #     thread1.start()
+    #     thread1.join()
+    #     respon=self.readfile('./Chapter02/Cocktile.txt')
+    #     self.assertNotRegex(respon, "Kosong")
+    
+
+
+    # def test_07_AriyoTujuh1184056(self):
+    #     from Chapter02.AriyoTujuh1184056 import ayomaju
+    #     thread1 = ayomaju("Thread Put", "AriyoTujuh")
+    #     thread1.start()
+    #     thread1.join()
+    #     respon=self.readfile('./Chapter02/AriyoTujuh')
+    #     self.assertNotRegex(respon, "Kosong")
+
+    # def test_07_bahartujuh1184002(self):
+    #     from Chapter02.bahartujuh1184002 import BaharQue,Bahartujuh1184002
+    #     ti= BaharQue("Thread 1 ",'kodepos')
+    #     tl = Bahartujuh1184002("Thread 2",'kodepos')
+    #     ti.start()
+    #     tl.start()
+    #     ti.join()
+    #     tl.join()
+    #     respon=self.readfile('./Chapter02/kodepos')
+    #     self.assertNotRegex(respon, "Gak Boleh Kosong")
+
+    # def test_07_parhanTujuh1184042(self):
+    #     from Chapter02.ParhanTujuh1184042 import parhanTujuh1184042,parhanmanajemenFile 
+    #     threadutama = parhanTujuh1184042("Thread Utama ", 2,5,5,'apigempa')
+    #     threadmanajemen= parhanmanajemenFile("Thread manajemen File ", 1,'apigempa')
+    #     threadmanajemen.start()
+    #     threadutama.start()
+    #     threadmanajemen.join()
+    #     threadutama.join()
+    #     respon=self.readfile('./Chapter02/apigempa.txt')
+    #     self.assertNotRegex(respon, "kosong")
+
+    def test_07_idaTujuh1184113(self):
+        from Chapter02.IdaTujuh1184113 import idaTujuh1184113,Director
+        threadutama = idaTujuh1184113("Thread Utama ", 2,5,5,'ida')
+        threaddirector= Director("Thread Director ", 1,'ida')
+        threaddirector.start()
+        threadutama.start()
+        threaddirector.join()
+        threadutama.join()
+        respon=self.readfile('./Chapter02/ida.txt')
+        self.assertNotRegex(respon, "kosong")
+>>>>>>> 24b6f17a6c094c764f51febda33c1f5eb0634516
