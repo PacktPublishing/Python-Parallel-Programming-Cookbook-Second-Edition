@@ -37,7 +37,7 @@ class Josuansef1184091Tujuh_Consumer(Thread):
    
     def readfile(self):
        q=queue.get()
-       f = open(self.filenya, "r")
+       f = open(self.filenya, "r+")
        print("Cek konten isi file : "+f.read())
        print("Selesai membaca file, eksekusi queue task done \n")
        queue.task_done()
@@ -68,7 +68,7 @@ class Josuansef1184091Tujuh_Producer(Thread):
             
    def apijj(self):
        with self.rlock:
-           print('didalam rlock apiservice, akses web service...')
+           print('akses web service api...')
            url='https://api-lk21.herokuapp.com/comingsoon'
            response = requests.get(url)
            html=response.json()
@@ -86,3 +86,4 @@ class Josuansef1184091Tujuh_Producer(Thread):
        f.write(str(konten))
        f.close()
        print('File sudah dibuat, selanjutnya, mau eksekusi event set')
+
