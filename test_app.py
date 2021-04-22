@@ -360,10 +360,21 @@ class TestApp(unittest.TestCase):
 #        respon=self.readfile('./Chapter02/ravi.txt')
 #        self.assertNotRegex(respon, "kosong")
     
-    def test_07_AnisaTujuh1184016(self):
-        from Chapter02.AnisaRosalinaTujuh1184016 import Anisa
-        thread1 = Anisa("Thread Put", 1, "Cocktile")
-        thread1.start()
-        thread1.join()
-        respon=self.readfile('./Chapter02/Cocktile.txt')
-        self.assertNotRegex(respon, "Kosong")
+    # def test_07_AnisaTujuh1184016(self):
+    #     from Chapter02.AnisaRosalinaTujuh1184016 import Anisa
+    #     thread1 = Anisa("Thread Put", 1, "Cocktile")
+    #     thread1.start()
+    #     thread1.join()
+    #     respon=self.readfile('./Chapter02/Cocktile.txt')
+    #     self.assertNotRegex(respon, "Kosong")
+    
+    def test_07_bahartujuh1184002(self):
+        from Chapter02.bahartujuh1184002 import BaharQue,Bahartujuh1184002
+        ti= BaharQue("Thread 1 ",'kodepos')
+        tl = Bahartujuh1184002("Thread 2",'kodepos')
+        ti.start()
+        tl.start()
+        ti.join()
+        tl.join()
+        respon=self.readfile('./Chapter02/kodepos')
+        self.assertNotRegex(respon, "Gak Boleh Kosong")
