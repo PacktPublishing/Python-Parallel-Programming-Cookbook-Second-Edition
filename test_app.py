@@ -34,49 +34,6 @@ class TestApp(unittest.TestCase):
     #     from Chapter02.Rizaluardi1184102 import main
     #     response =  main()
     #     self.assertEqual(response, True)
-
-        
-    # def test_02_zanwar_1184050(self):
-    #     from Chapter02.Zanwar1184050 import main
-    #     response =  main()
-    #     self.assertEqual(response, True)
-        
-
-    def test_02_ferdy_1184112(self):
-        from Chapter02.Ferdy1184112 import main
-        response = main()
-        self.assertEqual(response, True)
-
-    def test_02_ida_1184113(self):
-        from Chapter02.Ida1184113 import main
-        response = main()
-        self.assertEqual(response, True)
-
-    def test_02_okky_1184087(self):
-        from Chapter02.okky1184087 import main
-        response = main()
-        self.assertEqual(response, True)
-    
-    def test_02_vicky_1184037(self):
-        from Chapter02.vicky1184037 import main
-        response = main()
-
-    #def test_02_ferdy_1184112(self):
-    #   from Chapter02.Ferdy1184112 import main
-    #  response = main()
-    # self.assertEqual(response, True)
-
-    #def test_02_ida_1184113(self):
-    #   from Chapter02.Ida1184113 import main
-    #    response = main()
-    #    self.assertEqual(response, True)
-
-    #def test_02_okky_1184087(self):
-    #    from Chapter02.okky1184087 import main
-    #    response = main()
-    #    self.assertEqual(response, True)
-    
-
     
 
     def readfile(self,filename):
@@ -231,25 +188,11 @@ class TestApp(unittest.TestCase):
     #    self.assertEqual(response, True)
     
 
-    #def test_06_parhan_1184042(self):
-    #    from Chapter02.ParhanEnam1184042 import main
-    #    response =  main()
-    #    self.assertEqual(response, True)
-    
-    #def test_06_Vicky_1184037(self):
-    #    from Chapter02.VickyEnam1184037 import main
-    #    response = main()
-    #    self.assertEqual(response, True)
-
-#<<<<<<< HEAD
-
-
 
     # def test_06_parhan_1184042(self):
     #     from Chapter02.ParhanEnam1184042 import main
     #     response =  main()
     #     self.assertEqual(response, True)
-
 
 
    # def test_06_parhan_1184042(self):
@@ -276,17 +219,6 @@ class TestApp(unittest.TestCase):
 
 
     #def test_06_WahyuKurniaSari_1184001(self):
-    #    from Chapter02.WahyuKurniaSariEnam1184001 import main
-    #    result=main()
-    #    self.assertEqual(result, True)
-    
-    #def test_06_Vicky_1184037(self):
-    #    from Chapter02.VickyEnam1184037 import main
-    #    result=main()
-    #    self.assertEqual(result, True)
-
-
-    #def test_06_WahyuKurniaSari_1184001(self):
 
 
       # def test_06_WahyuKurniaSari_1184001(self):
@@ -295,18 +227,7 @@ class TestApp(unittest.TestCase):
     #     self.assertEqual(result, True)
 
    
-
     #def test_06_WahyuKurniaSari_1184001(self):
-
-        #from Chapter02.WahyuKurniaSariEnam1184001 import main
-        #result=main()
-        #self.assertEqual(result, True)
-
-    #def test_06_ira_1184024(self):
-    #    from Chapter02.IraEnam1184024 import main
-    #    response =  main()
-    #    self.assertEqual(response, True)
-
 
         #from Chapter02.WahyuKurniaSariEnam1184001 import main
         #result=main()
@@ -327,12 +248,6 @@ class TestApp(unittest.TestCase):
     #    from Chapter02.IraEnam1184024 import main
     #    response =  main()
     #    self.assertEqual(response, True)
-
-
-    #def test_06_rizaluardi_1184102(self):
-    #    from Chapter02.RizaluardiEnam1184102 import main
-    #    result=main()
-    #    self.assertEqual(result, True)
 
 
     # def test_06_rizaluardi_1184102(self):
@@ -396,12 +311,6 @@ class TestApp(unittest.TestCase):
     #      respon=self.readfile('./Chapter02/pokemon.txt')
     #      self.assertNotRegex(respon, "Kosong")
 
-
-    #def test_06_bahar_1184002(self):
-    #    from Chapter02.baharenam1184002 import main
-    #    response =  main()
-    #    self.assertEqual(response, True)
-
     # def test_06_bahar_1184002(self):
     #     from Chapter02.baharenam1184002 import main
     #     response =  main()
@@ -411,7 +320,6 @@ class TestApp(unittest.TestCase):
     #     from Chapter02.JosuansefEnam_1184091 import main
     #     response =  main()
     #     self.assertEqual(response, True)
-
 
 
 #    def test_07_raviTujuh1184040(self):
@@ -447,15 +355,6 @@ class TestApp(unittest.TestCase):
     #     respon=self.readfile('./Chapter02/ravi.txt')
     #     self.assertNotRegex(respon, "kosong")
     
-
-    #def test_07_AnisaTujuh1184016(self):
-    #    from Chapter02.AnisaRosalinaTujuh1184016 import Anisa
-    #    thread1 = Anisa("Thread Put", 1, "Cocktile")
-    #    thread1.start()
-    #    thread1.join()
-    #    respon=self.readfile('./Chapter02/Cocktile.txt')
-    #    self.assertNotRegex(respon, "Kosong")
-
 #     def test_07_AnisaTujuh1184016(self):
 #         from Chapter02.AnisaRosalinaTujuh1184016 import Anisa
 #         thread1 = Anisa("Thread Put", 1, "Cocktile")
@@ -463,7 +362,6 @@ class TestApp(unittest.TestCase):
 #         thread1.join()
 #         respon=self.readfile('./Chapter02/Cocktile.txt')
 #         self.assertNotRegex(respon, "Kosong")
-
 
     # def test_07_AnisaTujuh1184016(self):
     #     from Chapter02.AnisaRosalinaTujuh1184016 import Anisa
@@ -547,10 +445,6 @@ class TestApp(unittest.TestCase):
     #    threadutama.start()
     #    threadhandling.join()
     #    threadutama.join()
-
-    #    respon=self.readfile('./Chapter02/ida.txt')
-    #    self.assertNotRegex(respon, "kosong")
-
     #    respon=self.readfile('./Chapter02/ira.txt')
     #    self.assertNotRegex(respon, "kosong")
 
@@ -560,4 +454,4 @@ class TestApp(unittest.TestCase):
         thread1.start()
         thread1.join()
         respon=self.readfile('./Chapter02/vicky')
-        self.assertNotRegex(respon, "Kosong"
+        self.assertNotRegex(respon, "Kosong")
