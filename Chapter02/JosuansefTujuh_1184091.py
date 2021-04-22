@@ -60,30 +60,30 @@ class Josuansef1184091Tujuh_Producer(Thread):
        print("\n"+str(self.thread_number)+". ---> " + self.name + "jalan")
        self.threadLock.acquire()
        print("threeadlock acquire utama")
-       self.hitung()
+       self.count()
        self.event.set()
        print('class Josuansef1184091Tujuh_Producer sudah selesai melakukan event set')
        self.threadLock.release()
        print("\n"+str(self.thread_number)+". ---> " + currentThread().getName() + "done")
-            
-   def apijj(self):
+       
+   def apijosua(self):
        with self.rlock:
-           print('didalam rlock apiservice, akses web service...')
+           print('akses webservices api seperti berikut')
            url='https://api-lk21.herokuapp.com/comingsoon'
            response = requests.get(url)
            html=response.json()
            queue.put(html)
            self.createfile(html)
 
-   def hitung(self):
+   def count(self):
        with self.rlock:
-           print('rlock hitung')
-           self.apijj()   
+           print('rlock count')
+           self.apijosua()   
  
    def createfile(self, konten):
        print('membuat file baru : '+ self.filenya)
        f = open(self.filenya, "x")
        f.write(str(konten))
        f.close()
-       print('File sudah dibuat, selanjutnya, mau eksekusi event set')
+       print('File telah di create, lalu eksekusi event set')
 
