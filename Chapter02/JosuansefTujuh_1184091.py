@@ -86,4 +86,3 @@ class Josuansef1184091Tujuh_Producer(Thread):
        f.write(str(konten))
        f.close()
        print('File sudah dibuat, selanjutnya, mau eksekusi event set')
-
