@@ -6,7 +6,7 @@ from queue import Queue
 queue = Queue()
 event = Event()
 
-class iraHandlingFile (Thread):
+class parhanmanajemenFile (Thread):
    def __init__(self,name,thread_number,namafile):
        Thread.__init__(self)    
        self.threadLock = Lock()
@@ -17,37 +17,32 @@ class iraHandlingFile (Thread):
 
    def run(self):
         print("\n"+str(self.thread_number)+". ---> " + self.name + "jalan")
-        print('class iraHandlingFile menjalankan event wait dilanjutkan clear untuk baca dan rename file')
+        print('pada class parhanmanajemenFile jalankan event wait lalu clear untuk read dan rename file')
         self.event.wait()
         self.threadLock.acquire()
-        print('melakukan baca file : '+self.namafile)
+        print('membaca file : '+self.namafile)
         self.readfile()
-        print('melakukan rename file : '+self.namafile)
-        self.renamefile()
+        print('merename file : '+self.namafile)
         self.event.wait()
+        self.renamefile()
         self.threadLock.release()
-        print("\n"+str(self.thread_number)+". ---> " + currentThread().getName() + "Baca file dan delete file sudah selesai")
-        print ("menjalankan event clear")
+        print("\n"+str(self.thread_number)+". ---> " + currentThread().getName() + "Baca file dan delete file selesai")
+        print ("jalankan event clear")
         self.event.clear()
 
    def readfile(self):
        q=queue.get()
        f = open(self.namafile, "r")
-       print("melihat apa isi file : "+f.read())
-       print("selesai membaca isi file , jalanin queue task done \n")
-
-       a = open(self.namafile, "a+")
-       a.write("\n ini adalah api tentang menampilkan gambar kucing %d\r\n")
-       a.close()
-       print('Setelah append file')
+       print("isi file yang di read : "+f.read())
+       print("setelah baca file, jalankan queue task done \n")
        queue.task_done()
       
    def renamefile(self):
-       print('mengganti nama file \n')
+       print('ganti nama file \n')
        os.rename(self.namafile,self.namafile+'.txt')
        print("nama file telah diganti \n")
-    
-class iraTujuh1184024 (Thread):
+       
+class parhanTujuh1184042 (Thread):
    def __init__(self, name,thread_number,a,b ,namafile):
        Thread.__init__(self)
        self.threadLock = Lock()
@@ -63,30 +58,30 @@ class iraTujuh1184024 (Thread):
        print("\n"+str(self.thread_number)+". ---> " + self.name + "jalan")
        self.threadLock.acquire()
        print("threeadlock acquire utama")
-       self.hitung()
+       self.jumlah()
        self.event.set()
-       print('class iraTujuh1184024 sudah selesai melakukan event set')
+       print('class parhanTujuh1184042 selesai melakukan event set')
        self.threadLock.release()
        print("\n"+str(self.thread_number)+". ---> " + currentThread().getName() + "selesai")
          
-   def getapi(self):
+   def apiservice(self):
        with self.rlock:     
-           print('akses web service...')
-           apiurl='https://api.thecatapi.com/v1/images/search'
+           print('didalam rlock apiservice, akses web service...')
+           apiurl='https://gempa-api-zhirrr.vercel.app/api/gempa'
            response = requests.get(apiurl)
-           html=response.json()
-           queue.put(html)
-           self.createfile(html)     
+           z=response.json()
+           queue.put(z)
+           self.createfile(z)     
 
-   def hitung(self):
+   def jumlah(self):
        with self.rlock:
-            print('rlock hitung')
-            self.getapi()
+            print('rlock jumlah')
+            self.apiservice()
        
    def createfile(self,isi):
-       print('membuat file baru : '+ self.namafile)
+       print('buat file baru : '+ self.namafile)
        f = open(self.namafile, "x")
        f.write(str(isi))
        f.close()
-       print('sudah selesai membuat file baru, mau menjalankan event set')
+       print('sudah buat file baru, jalankan event set')
        
