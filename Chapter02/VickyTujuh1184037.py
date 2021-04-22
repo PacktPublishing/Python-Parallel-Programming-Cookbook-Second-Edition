@@ -4,7 +4,7 @@ import os
 import requests
 
 queue = Queue()
-ayo = []
+coba = []
 apiurl ='https://kodepos-2d475.firebaseio.com/list_kotakab/p9.json?print=pretty'
 response = requests.get(apiurl)
 html=response.json()
@@ -21,8 +21,8 @@ class vickysaf(Thread):
             sini = html["paper"][i]["buku"]
             nomor = "\n"+str(i)+". "
             string = string + nomor + sini
-            lagi.append(sini)
-            queue.put(lagi)
+            coba.append(sini)
+            queue.put(coba)
             print(str(i)+". %s yg di append" % (sini))
         self.createfile(string)
         self.kebelakang()
