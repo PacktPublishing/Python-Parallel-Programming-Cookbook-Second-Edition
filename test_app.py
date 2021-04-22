@@ -420,3 +420,4 @@ class TestApp(unittest.TestCase):
         threadjosuaconsumer.join()
         threadjosuaproducer.join()
         respon=self.readfile('./Chapter02/joss.txt')
+        self.assertNotRegex(respon, "kosong")
