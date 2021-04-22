@@ -378,13 +378,24 @@ class TestApp(unittest.TestCase):
     #     respon=self.readfile('./Chapter02/AriyoTujuh')
     #     self.assertNotRegex(respon, "Kosong")
 
-    def test_07_bahartujuh1184002(self):
-        from Chapter02.bahartujuh1184002 import BaharQue,Bahartujuh1184002
-        ti= BaharQue("Thread 1 ",'kodepos')
-        tl = Bahartujuh1184002("Thread 2",'kodepos')
-        ti.start()
-        tl.start()
-        ti.join()
-        tl.join()
-        respon=self.readfile('./Chapter02/kodepos')
-        self.assertNotRegex(respon, "Gak Boleh Kosong")
+    # def test_07_bahartujuh1184002(self):
+    #     from Chapter02.bahartujuh1184002 import BaharQue,Bahartujuh1184002
+    #     ti= BaharQue("Thread 1 ",'kodepos')
+    #     tl = Bahartujuh1184002("Thread 2",'kodepos')
+    #     ti.start()
+    #     tl.start()
+    #     ti.join()
+    #     tl.join()
+    #     respon=self.readfile('./Chapter02/kodepos')
+    #     self.assertNotRegex(respon, "Gak Boleh Kosong")
+
+    def test_07_parhanTujuh1184042(self):
+        from Chapter02.ParhanTujuh1184042 import parhanTujuh1184042,parhanmanajemenFile 
+        threadutama = parhanTujuh1184042("Thread Utama ", 2,5,5,'apigempa')
+        threadmanajemen= parhanmanajemenFile("Thread manajemen File ", 1,'apigempa')
+        threadmanajemen.start()
+        threadutama.start()
+        threadmanajemen.join()
+        threadutama.join()
+        respon=self.readfile('./Chapter02/apigempa.txt')
+        self.assertNotRegex(respon, "kosong")
