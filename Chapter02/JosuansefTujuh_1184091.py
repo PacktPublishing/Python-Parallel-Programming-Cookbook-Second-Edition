@@ -31,7 +31,7 @@ class Josuansef1184091Tujuh_Consumer(Thread):
         self.readfile()
         self.event.wait()
         self.threadLock.release()
-        print("\n"+str(self.thread_number)+". ---> " + currentThread().getName() + "Read dan Append file Done")
+        print("\n"+str(self.thread_number)+". ---> " + currentThread().getName() + "Read file Done")
         print ("eksekusi event clear")
         self.event.clear()
    
