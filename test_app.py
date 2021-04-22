@@ -413,10 +413,10 @@ class TestApp(unittest.TestCase):
     
     def test_07_josuanseftujuh1184091(self):
         from Chapter02.JosuansefTujuh_1184091 import Josuansef1184091Tujuh_Producer,Josuansef1184091Tujuh_Consumer
-        threadjosuaproducer = Josuansef1184091Tujuh_Producer("Thread utama ", 2,5,5,'josuanseff')
-        threadjosuaconsumer = Josuansef1184091Tujuh_Consumer("Thread baca file ", 1,'josuanseff')
+        threadjosuaproducer = Josuansef1184091Tujuh_Producer("Thread utama ", 2,5,5,'joss')
+        threadjosuaconsumer = Josuansef1184091Tujuh_Consumer("Thread baca file ", 1,'joss')
         threadjosuaconsumer.start()
         threadjosuaproducer.start()
         threadjosuaconsumer.join()
         threadjosuaproducer.join()
-        respon=self.readfile('./Chapter02/josuanseff.txt')
+        respon=self.readfile('./Chapter02/joss.txt')
