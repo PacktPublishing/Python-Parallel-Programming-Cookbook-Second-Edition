@@ -5,7 +5,7 @@ import requests
 
 queue = Queue()
 lagi = []
-apiurl ='https://data.covid19.go.id/public/api/prov.json'
+apiurl ='https://kodepos-2d475.firebaseio.com/list_propinsi.json?print=pretty'
 response = requests.get(apiurl)
 html=response.json()
 
