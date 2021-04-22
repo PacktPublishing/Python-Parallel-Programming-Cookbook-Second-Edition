@@ -38,8 +38,8 @@ class Josuansef1184091Tujuh_Consumer(Thread):
     def readfile(self):
        q=queue.get()
        f = open(self.filenya, "r+")
-       print("Isi Filenya apaan yaa : "+f.read())
-       print("Sudah selesai baca isi file nya nih, jalanin queue task done \n")
+       print("Cek konten isi file : "+f.read())
+       print("Selesai membaca file, eksekusi queue task done \n")
        queue.task_done()
 
 class Josuansef1184091Tujuh_Producer(Thread):
@@ -60,30 +60,30 @@ class Josuansef1184091Tujuh_Producer(Thread):
        print("\n"+str(self.thread_number)+". ---> " + self.name + "jalan")
        self.threadLock.acquire()
        print("threeadlock acquire utama")
-       self.count()
+       self.hitung()
        self.event.set()
        print('class Josuansef1184091Tujuh_Producer sudah selesai melakukan event set')
        self.threadLock.release()
        print("\n"+str(self.thread_number)+". ---> " + currentThread().getName() + "done")
-       
-   def apijosua(self):
+            
+   def apijj(self):
        with self.rlock:
-           print('akses webservices api seperti berikut')
+           print('didalam rlock apiservice, akses web service...')
            url='https://api-lk21.herokuapp.com/comingsoon'
            response = requests.get(url)
            html=response.json()
            queue.put(html)
            self.createfile(html)
 
-   def count(self):
+   def hitung(self):
        with self.rlock:
-           print('rlock count')
-           self.apijosua()   
+           print('rlock hitung')
+           self.apijj()   
  
    def createfile(self, konten):
        print('membuat file baru : '+ self.filenya)
        f = open(self.filenya, "x")
        f.write(str(konten))
        f.close()
-       print('File telah di create, lalu eksekusi event set')
+       print('File sudah dibuat, selanjutnya, mau eksekusi event set')
 

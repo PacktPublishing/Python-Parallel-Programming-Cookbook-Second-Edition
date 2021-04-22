@@ -128,7 +128,7 @@ class TestApp(unittest.TestCase):
     def readfile(self,nfile):
         f = open(nfile, "r+")
         return str(f.read())	
-
+       
     # def test_03_raviTiga1184040(self):
     #     from Chapter02.raviTiga1184040 import raviTiga1184040, raviMenulis 
     #     threadwrite = raviMenulis ("Thread Pro ",1 , 'value')
@@ -400,6 +400,17 @@ class TestApp(unittest.TestCase):
     #     respon=self.readfile('./Chapter02/apigempa.txt')
     #     self.assertNotRegex(respon, "kosong")
 
+    #def test_07_idaTujuh1184113(self):
+    #    from Chapter02.IdaTujuh1184113 import idaTujuh1184113,Director
+    #    threadutama = idaTujuh1184113("Thread Utama ", 2,5,5,'ida')
+    #    threaddirector= Director("Thread Director ", 1,'ida')
+    #    threaddirector.start()
+    #    threadutama.start()
+    #    threaddirector.join()
+    #    threadutama.join()
+    #    respon=self.readfile('./Chapter02/ida.txt')
+    #    self.assertNotRegex(respon, "kosong")
+    
     def test_07_josuanseftujuh1184091(self):
         from Chapter02.JosuansefTujuh_1184091 import Josuansef1184091Tujuh_Producer,Josuansef1184091Tujuh_Consumer
         threadjosuaproducer = Josuansef1184091Tujuh_Producer("Thread utama ", 2,5,5,'josuanseff')
@@ -409,4 +420,3 @@ class TestApp(unittest.TestCase):
         threadjosuaconsumer.join()
         threadjosuaproducer.join()
         respon=self.readfile('./Chapter02/josuanseff.txt')
-        self.assertNotRegex(respon, "kosong")
