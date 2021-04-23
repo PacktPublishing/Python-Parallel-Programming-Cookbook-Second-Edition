@@ -1,7 +1,9 @@
 import time
-from do_something import *
+from Chapter01.do_something import *
 
-if __name__ == "__main__":
+
+
+def serial_test():
     start_time = time.time()
     size = 10000000   
     n_exec = 10
@@ -13,3 +15,4 @@ if __name__ == "__main__":
     print ("List processing complete.")
     end_time = time.time()
     print("serial time=", end_time - start_time)
+    return True

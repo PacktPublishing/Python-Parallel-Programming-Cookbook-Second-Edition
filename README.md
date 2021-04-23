@@ -1,6 +1,6 @@
 # Python Parallel Programming Cookbook - Second Edition 
 
-<a href="https://www.packtpub.com/programming/python-parallel-programming-cookbook?utm_source=github&utm_medium=repository&utm_campaign=9781789533736"><img src="https://www.packtpub.com/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/9/7/9781789533736-original.jpeg" alt="Python Parallel Programming Cookbook - Second Edition " height="256px" align="right"></a>
+<img src="https://travis-ci.com/awangga/Python-Parallel-Programming-Cookbook-Second-Edition.svg?branch=master" alt="Python Parallel Programming Cookbook - Second Edition " height="256px" align="right"></a>
 
 This is the code repository for [Python Parallel Programming Cookbook - Second Edition ](https://www.packtpub.com/programming/python-parallel-programming-cookbook?utm_source=github&utm_medium=repository&utm_campaign=9781789533736), published by Packt.
 

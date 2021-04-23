@@ -1,6 +1,5 @@
 import logging
 import threading
-import time
 
 LOG_FORMAT = '%(asctime)s %(threadName)-17s %(levelname)-8s %(message)s'
 logging.basicConfig(level=logging.INFO, format=LOG_FORMAT)
@@ -17,9 +16,11 @@ class Consumer(threading.Thread):
 
         with condition:
 
-            if len(items) == 0:
+            if len(items) == 0:#kondisi stack kosong
                 logging.info('no items to consume')
-                condition.wait()
+                logging.info('concume : ini mau berenti')
+                condition.wait()#melakukan pause sampai dapat notify baru jalan lagi
+                logging.info('consume : dapat notifi jalan lagi')
 
             items.pop()
             logging.info('consumed 1 item')
@@ -28,7 +29,7 @@ class Consumer(threading.Thread):
 
     def run(self):
         for i in range(20):
-            time.sleep(2)
+            #time.sleep(2)
             self.consume()
 
 
@@ -40,18 +41,20 @@ class Producer(threading.Thread):
 
         with condition:
 
-            if len(items) == 10:
+            if len(items) == 5:#kondisi penuh
                 logging.info('items produced {}. Stopped'.format(len(items)))
-                condition.wait()
+                logging.info('produce : ini mau berenti')
+                condition.wait()#pause disini setelah dapat notify baru jalan kembali
+                logging.info('produce : dapat notifi jalan lagi')
 
-            items.append(1)
+            items.append(11)
             logging.info('total items {}'.format(len(items)))
 
             condition.notify()
 
     def run(self):
         for i in range(20):
-            time.sleep(0.5)
+            #time.sleep(0.5)
             self.produce()
 
 
