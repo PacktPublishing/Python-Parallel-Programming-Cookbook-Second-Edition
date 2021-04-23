@@ -5,7 +5,7 @@ import requests
 
 queue = Queue()
 lagi = []
-apiurl ='https://kodepos-2d475.firebaseio.com/list_propinsi.json?print=pretty'
+apiurl ='https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 response = requests.get(apiurl)
 html=response.json()
 
@@ -16,9 +16,9 @@ class vickysaf(Thread):
         self.namathread = namathread
 
     def mainapi(self):
-        string = "kertas:"
-        for i in range(len(html["pena"])):
-            sini = html["pena"][i]["strBuku"]
+        string = "nama kota:"
+        for i in range(len(html["city"])):
+            sini = html["city"][i]["strIngredient1"]
             nomor = "\n"+str(i)+". "
             string = string + nomor + sini
             lagi.append(sini)
