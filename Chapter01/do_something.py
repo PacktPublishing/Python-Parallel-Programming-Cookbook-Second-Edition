@@ -1,14 +1,5 @@
-import time
-from do_something import
+import random
 
-if __name__ == "__main__" :
-	start_time = time.time()
-	size = 10000000
-	n_exec = 10
-	for i in range(0, n_exec) :
-		out_list = list()
-		do_something(size, out_list)
-	
-	print ("List processing complate.")
-	end_time = time.time()
-	print("serial time-", end_time - start_time)
+def do_something(count,out_list):
+	for i in range(count):
+		out_list.append(random.random())

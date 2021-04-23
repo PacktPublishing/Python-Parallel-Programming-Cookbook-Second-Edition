@@ -17,8 +17,8 @@ class vickysaf(Thread):
 
     def mainapi(self):
         string = "nama kota:"
-        for i in range(len(html["city"])):
-            sini = html["city"][i]["strIngredient1"]
+        for i in range(len(html["drinks"])):
+            sini = html["drinks"][i]["strIngredient1"]
             nomor = "\n"+str(i)+". "
             string = string + nomor + sini
             lagi.append(sini)
