@@ -425,6 +425,28 @@ class TestApp(unittest.TestCase):
     #    respon=self.readfile('./Chapter02/ida.txt')
     #    self.assertNotRegex(respon, "kosong")
     
+    def test_07_rizaluarditujuh_1184102(self):
+        from Chapter02.RizaluardiTujuh1184102 import RizaluardiIms,RizaluardiTujuh1184102
+        nganu1 = RizaluardiIms("Thread 1", 'provinsi')
+        nganu2 = RizaluardiTujuh1184102("Thread 2",'provinsi')
+        nganu1.start()
+        nganu2.start()
+        nganu1.join()
+        nganu2.join()
+        respon=self.readfile('./Chapter02/provinsi')
+        self.assertNotRegex(respon, "Jangan kosong datanya")
+        
+    #def test_07_josuanseftujuh1184091(self):
+    #   from Chapter02.JosuansefTujuh_1184091 import Josuansef1184091Tujuh_Producer,Josuansef1184091Tujuh_Consumer
+    #   threadjosuaproducer = Josuansef1184091Tujuh_Producer("Thread utama ", 2,5,5,'joss')
+    #   threadjosuaconsumer = Josuansef1184091Tujuh_Consumer("Thread baca file ", 1,'joss')
+    #   threadjosuaconsumer.start()
+    #   threadjosuaproducer.start()
+    #   threadjosuaconsumer.join()
+    #   threadjosuaproducer.join()
+    #   respon=self.readfile('./Chapter02/joss')
+    #   self.assertNotRegex(respon, "kosong")
+
     # def test_07_josuanseftujuh1184091(self):
     #     from Chapter02.JosuansefTujuh_1184091 import Josuansef1184091Tujuh_Producer,Josuansef1184091Tujuh_Consumer
     #     threadjosuaproducer = Josuansef1184091Tujuh_Producer("Thread utama ", 2,5,5,'joss')
@@ -446,6 +468,7 @@ class TestApp(unittest.TestCase):
     #    threadhandling.join()
     #    threadutama.join()
     #    respon=self.readfile('./Chapter02/ira.txt')
+<<<<<<< HEAD
     #    self.assertNotRegex(respon, "kosong")
 
     def test_07_vickyTujuh1184037(self):
@@ -455,3 +478,6 @@ class TestApp(unittest.TestCase):
         thread1.join()
         respon=self.readfile('./Chapter02/vicky')
         self.assertNotRegex(respon, "Kosong")
+=======
+    #    self.assertNotRegex(respon, "kosong")
+>>>>>>> 5fe2184dfac85a8ef8e1a2b9f730486108983e6c
