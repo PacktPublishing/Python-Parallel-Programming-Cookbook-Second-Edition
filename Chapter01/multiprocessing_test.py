@@ -1,9 +1,9 @@
-from do_something import *
+from Chapter01.do_something import *
 import time
 import multiprocessing
 
 
-if __name__ == "__main__":
+def multiprocessing_test():
     start_time = time.time()
     size = 10000000   
     procs = 10   
@@ -23,3 +23,4 @@ if __name__ == "__main__":
     print ("List processing complete.")
     end_time = time.time()
     print("multiprocesses time=", end_time - start_time)
+    return True

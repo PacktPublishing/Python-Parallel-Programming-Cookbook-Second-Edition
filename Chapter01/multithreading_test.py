@@ -1,8 +1,8 @@
-from do_something import *
+from Chapter01.do_something import *
 import time
 import threading
 
-if __name__ == "__main__":
+def multithreading_test():
     start_time = time.time()
     size = 10000000
     threads = 10  
@@ -21,4 +21,5 @@ if __name__ == "__main__":
     print ("List processing complete.")
     end_time = time.time()
     print("multithreading time=", end_time - start_time)
+    return True 
 	
