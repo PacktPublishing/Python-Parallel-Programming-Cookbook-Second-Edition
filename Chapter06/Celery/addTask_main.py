@@ -1,9 +1,8 @@
-###
-#addTask.py : RUN the AddTask example with 
-###
+# Submits a Celery task asynchronously
 
-import addTask
+from addTask import add
 
 if __name__ == '__main__':
-    result = addTask.add.delay(5,5)
-    
+
+    # Queue task for background execution
+    add.delay(5, 5)

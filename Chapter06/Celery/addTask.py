@@ -1,12 +1,14 @@
-###
-## addTask.py :Executing a simple task
-###
+# Defines a Celery task for distributed execution
 
 from celery import Celery
 
-app = Celery('addTask',broker='amqp://guest@localhost//')
+# Configure Celery application and message broker
+app = Celery(
+    'tasks',
+    broker='pyamqp://guest@localhost//'
+)
 
+# Task executed by Celery workers
 @app.task
 def add(x, y):
     return x + y
-

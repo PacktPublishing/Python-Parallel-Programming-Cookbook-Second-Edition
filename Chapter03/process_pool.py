@@ -1,16 +1,25 @@
-#Using a Process Pool – Chapter 3: Process Based Parallelism
+# Demonstrates parallel processing using a process pool
+
 import multiprocessing
 
+
+# Function executed by pool workers
 def function_square(data):
-    result = data*data
-    return result
+    return data * data
 
 
 if __name__ == '__main__':
-    inputs = list(range(0,100))
+
+    # Input data
+    inputs = list(range(0, 100))
+
+    # Create pool with 4 worker processes
     pool = multiprocessing.Pool(processes=4)
+
+    # Apply function to all inputs
     pool_outputs = pool.map(function_square, inputs)
 
-    pool.close() 
-    pool.join()  
-    print ('Pool    :', pool_outputs)
+    pool.close()
+    pool.join()
+
+    print('Pool :', pool_outputs)

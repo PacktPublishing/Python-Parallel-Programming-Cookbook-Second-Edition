@@ -7,6 +7,7 @@ LOG_FORMAT = '%(asctime)s %(threadName)-17s %(levelname)-8s %(message)s'
 logging.basicConfig(level=logging.INFO, format=LOG_FORMAT)
 
 items = []
+# Event object for simple "stop/go" signaling between threads
 event = threading.Event()
 
 
@@ -17,6 +18,7 @@ class Consumer(threading.Thread):
     def run(self):
         while True:
             time.sleep(2)
+            # Blocks execution until event.set() is called by the producer
             event.wait()
             item = items.pop()
             logging.info('Consumer notify: {} popped by {}'\
@@ -33,6 +35,7 @@ class Producer(threading.Thread):
             items.append(item)
             logging.info('Producer notify: item {} appended by {}'\
                          .format(item, self.name))
+            # Trigger the event and then immediately reset it
             event.set()
             event.clear()
 

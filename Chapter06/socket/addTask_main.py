@@ -1,6 +1,6 @@
-from addTask import add
+# Executes the Celery task asynchronously
 
+from addTask import add
 
 if __name__ == '__main__':
     add.delay(5, 5)
-    

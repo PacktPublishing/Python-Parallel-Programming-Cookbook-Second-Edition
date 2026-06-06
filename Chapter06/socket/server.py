@@ -1,20 +1,40 @@
-# server .py
+# Basic TCP socket server
+
 import socket
 import time
 
-# create a socket object
-serversocket=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-# get local machine name
-host=socket.gethostname()
-port=9999
-# bind to the port
-serversocket.bind((host,port))
-# queue up to 5 requests
+# Create server socket
+serversocket = socket.socket(
+    socket.AF_INET,
+    socket.SOCK_STREAM
+)
+
+host = socket.gethostname()
+port = 9999
+
+# Bind socket to address
+serversocket.bind((host, port))
+
+# Start listening for connections
 serversocket.listen(5)
-# establish a connection
-while True:	
-    clientsocket,addr=serversocket.accept()
-    print ("Connected with[addr],[port]%s"%str(addr))
-    currentTime=time.ctime(time.time())+"\r\n"
-    clientsocket.send(currentTime.encode('ascii'))
+
+while True:
+
+    # Accept client connection
+    clientsocket, addr = serversocket.accept()
+
+    print(
+        "Connected with [addr],[port] %s"
+        % str(addr)
+    )
+
+    # Send current server time
+    currentTime = (
+        time.ctime(time.time()) + "\r\n"
+    )
+
+    clientsocket.send(
+        currentTime.encode('ascii')
+    )
+
     clientsocket.close()

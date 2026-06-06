@@ -6,6 +6,7 @@ LOG_FORMAT = '%(asctime)s %(threadName)-17s %(levelname)-8s %(message)s'
 logging.basicConfig(level=logging.INFO, format=LOG_FORMAT)
 
 items = []
+# Condition object allows threads to wait for specific state changes
 condition = threading.Condition()
 
 
@@ -16,9 +17,11 @@ class Consumer(threading.Thread):
     def consume(self):
 
         with condition:
+            # Wait if there is nothing to take
 
             if len(items) == 0:
                 logging.info('no items to consume')
+                # Signal the producer that there is space available
                 condition.wait()
 
             items.pop()
@@ -39,9 +42,11 @@ class Producer(threading.Thread):
     def produce(self):
 
         with condition:
+            # Wait if the buffer is full
 
             if len(items) == 10:
                 logging.info('items produced {}. Stopped'.format(len(items)))
+                # Signal the consumer that a new item is ready
                 condition.wait()
 
             items.append(1)

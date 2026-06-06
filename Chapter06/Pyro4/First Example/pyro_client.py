@@ -1,11 +1,12 @@
+# Pyro4 remote object client
+
 import Pyro4
 
-#uri = input("insert the PYRO4 server URI (help : PYRONAME:server) ").strip()
+# Get user input
 name = input("What is your name? ").strip()
-# use name server object lookup uri shortcut
-server = Pyro4.Proxy("PYRONAME:server")    
+
+# Connect to remote object
+server = Pyro4.Proxy("PYRONAME:server")
+
+# Invoke remote method
 print(server.welcomeMessage(name))
-
-
-
-

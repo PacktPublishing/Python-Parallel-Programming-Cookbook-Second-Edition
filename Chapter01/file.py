@@ -1,11 +1,22 @@
-f = open ('test.txt', 'w')
-f.write ('first line of file \n') 
+# Demonstrates file writing and reading
 
-f.write ('second line of file \n') 
+# Open file in write mode
+f = open('test.txt', 'w')
 
+# Write content to file
+f.write('first line of file\n')
+f.write('second line of file\n')
+
+# Close file after writing
 f.close()
-f = open ('test.txt')
-content = f.read()
-print (content)
 
+# Open file in read mode
+f = open('test.txt')
+
+# Read complete file content
+content = f.read()
+
+print(content)
+
+# Close file after reading
 f.close()
